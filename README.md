@@ -1,8 +1,8 @@
-# wd_f: The WebDev FSE Starter Block Theme <!-- omit in toc -->
+# wd_f <!-- omit in toc -->
 
 [![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fwebdevstudios%2Fwd_f%2Fbadge%3Fref%3Dmain&style=flat)](https://github.com/WebDevStudios/wd_f/actions)
 
-A starter block theme from WebDevStudios.
+The WebDev FSE Starter Block Theme
 
 [![WebDevStudios. Your Success is Our Mission.](https://webdevstudios.com/wp-content/uploads/2018/04/wds-github-banner.png)](https://webdevstudios.com/contact/)
 
