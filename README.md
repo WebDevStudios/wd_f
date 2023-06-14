@@ -1,4 +1,4 @@
-# wd_f <!-- omit in toc -->
+# wd_f: The WebDev FSE Starter Block Theme <!-- omit in toc -->
 
 [![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fwebdevstudios%2Fwd_f%2Fbadge%3Fref%3Dmain&style=flat)](https://github.com/WebDevStudios/wd_f/actions)
 
@@ -12,14 +12,15 @@ A starter block theme from WebDevStudios.
 - [Getting Started](#getting-started)
 	- [Prerequisites](#prerequisites)
 	- [Quick Start](#quick-start)
-	- [Advanced](#advanced)
 - [Setup](#setup)
 	- [Development](#development)
 - [Contributing and Support](#contributing-and-support)
 
 ## Introduction
 
-Hi. I'm a starter theme called `wd_f`, or `wdunderscores`. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead, try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for!
+`wd_f`, also known as `WebDev FSE`, is an exciting and experimental sister theme of [wd_s](https://github.com/WebDevStudios/wd_s), specifically designed for those ready to dive into the world of full site editing. This cutting-edge theme is meant for hacking and exploration, allowing you to unleash your creativity and transform it into the next incredible WordPress theme.
+
+As a starter block theme, `wd_f` provides a solid foundation for your WordPress journey. However, it is important to note that it is not intended to be used as a Parent Theme. Instead, it is the perfect canvas for you to customize, modify, and shape into the most awesome WordPress theme you can imagine.
 
 I feature some of the web's most proven technologies like: [Tailwind](https://www.tailwindcss.com), [npm](https://www.npmjs.com/), [webpack](https://webpack.js.org/), [Sass](http://sass-lang.com/), and [PostCSS](https://github.com/postcss/postcss). To help you write clean code (that meets [WordPress standards](https://make.wordpress.org/core/handbook/best-practices/coding-standards/)), we tap into [@wordpress/scripts](https://developer.wordpress.org/block-editor/packages/packages-scripts/) for linting CSS and JavaScript. Did I mention that I'm also accessible? Yup. I pass both WCAG 2.1AA and Section 508 standards out of the box.
 
@@ -27,13 +28,17 @@ I also support [Selective Refresh](https://make.wordpress.org/core/2016/03/22/im
 
 Not to mention, I use [Browsersync](https://www.browsersync.io/) so you can watch your project update in real-time while you work.
 
+So, whether you're an experienced developer or a curious beginner, `wd_f` welcomes you to push the boundaries and create something extraordinary. With its flexible nature and compatibility with full site editing features, you have the power to transform every aspect of your website, from headers and footers to content layouts and beyond.
+
+Unleash your creativity, experiment with different blocks, and take advantage of the vast possibilities offered by full site editing. `wd_f` is here to support and inspire you as you embark on your WordPress adventure. Let your imagination run wild and turn `wd_f` into the next remarkable WordPress theme that will leave a lasting impression on the web.
+
 ## Getting Started
 
 ### Prerequisites
 
 Because I compile and bundle assets via NPM scripts, basic knowledge of the command line and the following dependencies are required:
 
-- [Node](https://nodejs.org) (v16+)
+- [Node](https://nodejs.org) (v18+)
 - [NPM](https://npmjs.com) (v8+)
 - [Composer](https://getcomposer.org/)
 
@@ -74,7 +79,7 @@ Install theme dependencies and trigger an initial build.
 >Note: You will need to have Composer and NPM 8 installed first.
 
 ```bash
-npm i --legacy-peer-deps
+npm i
 ```
 
 ### Development

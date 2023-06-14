@@ -18,7 +18,7 @@
 		"url": "https://github.com/WebDevStudios/wd_f/issues"
 	},
 	"engines": {
-		"node": ">=16",
+		"node": ">=18",
 		"npm": ">=8"
 	},
 	"dependencies": {
