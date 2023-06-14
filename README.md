@@ -24,10 +24,6 @@ As a starter block theme, `wd_f` provides a solid foundation for your WordPress 
 
 I feature some of the web's most proven technologies like: [Tailwind](https://www.tailwindcss.com), [npm](https://www.npmjs.com/), [webpack](https://webpack.js.org/), [Sass](http://sass-lang.com/), and [PostCSS](https://github.com/postcss/postcss). To help you write clean code (that meets [WordPress standards](https://make.wordpress.org/core/handbook/best-practices/coding-standards/)), we tap into [@wordpress/scripts](https://developer.wordpress.org/block-editor/packages/packages-scripts/) for linting CSS and JavaScript. Did I mention that I'm also accessible? Yup. I pass both WCAG 2.1AA and Section 508 standards out of the box.
 
-I also support [Selective Refresh](https://make.wordpress.org/core/2016/03/22/implementing-selective-refresh-support-for-widgets/) and [Live Preview](https://codex.wordpress.org/Theme_Customization_API#Part_3:_Configure_Live_Preview_.28Optional.29) in the Theme Customizer.
-
-Not to mention, I use [Browsersync](https://www.browsersync.io/) so you can watch your project update in real-time while you work.
-
 So, whether you're an experienced developer or a curious beginner, `wd_f` welcomes you to push the boundaries and create something extraordinary. With its flexible nature and compatibility with full site editing features, you have the power to transform every aspect of your website, from headers and footers to content layouts and beyond.
 
 Unleash your creativity, experiment with different blocks, and take advantage of the vast possibilities offered by full site editing. `wd_f` is here to support and inspire you as you embark on your WordPress adventure. Let your imagination run wild and turn `wd_f` into the next remarkable WordPress theme that will leave a lasting impression on the web.
