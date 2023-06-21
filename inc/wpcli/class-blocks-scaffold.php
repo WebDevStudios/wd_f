@@ -54,7 +54,7 @@ class Blocks_Scaffold {
 	 * : Block Icon.
 	 *
 	 * [--namespace=<blocknamespace>]
-	 * : Block Namespace. 
+	 * : Block Namespace.
 	 * : Default: WebDevStudios\wd_f
 	 *
 	 * ## EXAMPLES
@@ -75,7 +75,6 @@ class Blocks_Scaffold {
 		if ( ! isset( $args['namespace'] ) && preg_match( "/[\/\\\\]/", $assoc_args['namespace'] ) ) {
 			WP_CLI::error( 'Invalid namespace, Block namespace must not contain slashes.', true );
 		}
-
 
 		// Merge with default args.
 		$args = wp_parse_args(
