@@ -102,6 +102,8 @@ wp abs create_portable_block myblock --title="This is myblock" --desc="This bloc
 
 This will scaffold out a block inside of the `blocks` folder in the theme. Replace `myblock` with the name of your block and update the other items `title`, `desc`, `keyword`, `icon`, `namespace` with the appropriate information.
 
+Note: If you don't see your new block available under the block listing in the editor after following the above steps, try changing the namespacing in your block's `block.json` to the following format `your-namespace/blockname` and check again.
+
 ## Contributing and Support
 
 Your contributions and [support tickets](https://github.com/WebDevStudios/wd_f/issues) are welcome. Please see our [contributing guidelines](https://github.com/WebDevStudios/wd_f/blob/main/CONTRIBUTING.md) before submitting a pull request.

@@ -59,7 +59,7 @@ class Blocks_Scaffold {
 	 *
 	 * ## EXAMPLES
 	 *
-	 * wp abs create_portable_block myblock --title="This is myblock" --desc="This block is used for wds." --keywords="myblock" --icon="table-row-before" --namespace="WebDevStudios\wd_f"
+	 * wp abs create_portable_block myblock --title="This is myblock" --desc="This block is used for wds." --keyword="myblock" --icon="table-row-before" --namespace="WebDevStudios\wd_f"
 	 * @since  2.0.0
 	 * @param string $name The block name.
 	 * @param array  $assoc_args The block args.
@@ -84,7 +84,7 @@ class Blocks_Scaffold {
 				'desc'      => '',
 				'keywords'  => strtolower( $this->name ),
 				'icon'      => 'table-row-before',
-				'namespace' => 'wds',
+				'namespace' => 'wds/',
 			]
 		);
 
