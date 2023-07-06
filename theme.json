@@ -79,8 +79,13 @@
 					"name": "Tertiary 300"
 				}
 			]
+		},
+		"layout": {
+			"contentSize": "840px",
+			"wideSize": "1100px"
 		}
 	},
+
 	"styles": {
 		"typography": {
 			"fontFamily": "var(--wp--preset--font-family--system-fonts)",
@@ -386,6 +391,7 @@
 			}
 		}
 	},
+
 	"templateParts": [
 		{
 			"name": "header",
