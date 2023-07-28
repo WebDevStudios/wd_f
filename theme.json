@@ -1,4 +1,12 @@
 {
+	"version": 2,
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"customTemplates": [
+		{
+			"name": "blank",
+			"title": "Blank Tempate"
+		}
+	],
 	"settings": {
 		"appearanceTools": true,
 		"spacing": {
@@ -83,7 +91,8 @@
 		"layout": {
 			"contentSize": "840px",
 			"wideSize": "1100px"
-		}
+		},
+		"useRootPaddingAwareAlignments": true
 	},
 
 	"styles": {
@@ -408,13 +417,5 @@
 			"title": "Footer",
 			"area": "footer"
 		}
-	],
-	"customTemplates": [
-		{
-			"name": "blank",
-			"title": "Blank Tempate"
-		}
-	],
-	"version": 2,
-	"$schema": "https://schemas.wp.org/trunk/theme.json"
+	]
 }
