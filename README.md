@@ -18,7 +18,7 @@ The WebDev FSE Starter Block Theme
 
 ## Introduction
 
-`wd_f`, also known as `WebDev FSE`, is an exciting and experimental sister theme of [wd_s](https://github.com/WebDevStudios/wd_s), specifically designed for those ready to dive into the world of full site editing. This cutting-edge theme is meant for hacking and exploration, allowing you to unleash your creativity and transform it into the next incredible WordPress theme.
+`wd_f`, also known as `WebDev FSE` or `funderscores`, is an exciting and experimental sister theme of [wd_s](https://github.com/WebDevStudios/wd_s), specifically designed for those ready to dive into the world of full site editing. This cutting-edge theme is meant for hacking and exploration, allowing you to unleash your creativity and transform it into the next incredible WordPress theme.
 
 As a starter block theme, `wd_f` provides a solid foundation for your WordPress journey. However, it is important to note that it is not intended to be used as a Parent Theme. Instead, it is the perfect canvas for you to customize, modify, and shape into the most awesome WordPress theme you can imagine.
 
@@ -92,6 +92,7 @@ Command | Action
 `npm run report` | Gives detailed information on coding standards violations in PHP code
 
 ### Building a block with wpcli
+
 In order to build a block, run the following wpcli script.
 
 Note: If you're using Local, you can open the shell from within Local to do this. `Sitename -> Open site shell`.

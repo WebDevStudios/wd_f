@@ -72,7 +72,7 @@ class Blocks_Scaffold {
 			WP_CLI::error( 'Invalid name, Block name must only contain upper and lowercase letters.', true );
 		}
 
-		if ( ! isset( $args['namespace'] ) && preg_match( "/[\/\\\\]/", $assoc_args['namespace'] ) ) {
+		if ( ! isset( $args['namespace'] ) && preg_match( '/[\/\\\\]/', $assoc_args['namespace'] ) ) {
 			WP_CLI::error( 'Invalid namespace, Block namespace must not contain slashes.', true );
 		}
 
