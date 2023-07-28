@@ -16,7 +16,6 @@ module.exports = {
 	...defaultConfig,
 	entry: {
 		index: './src/index.js',
-		critical: './src/critical.js',
 	},
 	module: {
 		rules: [
