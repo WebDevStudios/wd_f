@@ -8,7 +8,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-Hey there! I'm wd_f, or WebDev FSE, and I'm here to introduce you to the exciting world of full site editing. As an experimental sister theme of wd_f, I'm designed for those who are eager to let their creativity run wild and turn me into an amazing WordPress theme. Join me on this adventure of exploration and customization, and together, let's create something truly extraordinary!
+Hey there! I'm wd_f, or WebDev FSE, and I'm here to introduce you to the exciting world of full site editing. As an experimental sister theme of wd_s, I'm designed for those who are eager to let their creativity run wild and turn me into an amazing WordPress theme. Join me on this adventure of exploration and customization, and together, let's create something truly extraordinary!
 
 == Copyright ==
 
