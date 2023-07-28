@@ -20,11 +20,3 @@ pre {
 .svg-sprite-wrapper {
 	display: none;
 }
-
-// Edges of blocks weren't obvious. Adds subtle outline.
-.wp-block-post-content {
-	@apply p-24;
-	.wp-block {
-		@apply p-4 outline outline-1 outline-primary-300;
-	}
-}
