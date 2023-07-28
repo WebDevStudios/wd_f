@@ -8,6 +8,9 @@
 		},
 		"typography": {
 			"fluid": true,
+			"dropCap": false,
+			"customFontSize": true,
+			"fontWeight": false,
 			"fontFamilies": [
 				{
 					"fontFamily": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
@@ -18,6 +21,78 @@
 					"fontFamily": "Helvetica Neue, Helvetica, Arial, sans-serif",
 					"slug": "helvetica-arial",
 					"name": "Helvetica or Arial"
+				},
+				{
+					"fontFamily": "\"Montserrat\", sans-serif",
+					"name": "Montserrat",
+					"slug": "montserrat-sans",
+					"fontFace": [
+						{
+							"fontFamily": "Montserrat",
+							"fontWeight": "400,700",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [
+								"file:./src/assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf"
+							]
+						},
+						{
+							"fontFamily": "Montserrat",
+							"fontWeight": "400,700",
+							"fontStyle": "italic",
+							"fontStretch": "normal",
+							"src": [
+								"file:./src/assets/fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf"
+							]
+						}
+					]
+				}
+			],
+			"fontSizes": [
+				{
+					"slug": "base-font",
+					"size": "16px",
+					"name": "base-font"
+				},
+				{
+					"slug": "design-small",
+					"size": "0.813rem",
+					"name": "Small"
+				},
+				{
+					"slug": "design-button",
+					"size": "1rem",
+					"name": "Button"
+				},
+				{
+					"slug": "design-body",
+					"size": "1rem",
+					"name": "Body"
+				},
+				{
+					"slug": "design-headline",
+					"size": "1.25rem",
+					"name": "Headline"
+				},
+				{
+					"slug": "design-medium",
+					"size": "1.563rem",
+					"name": "medium"
+				},
+				{
+					"slug": "design-large",
+					"size": "1.938rem",
+					"name": "large"
+				},
+				{
+					"slug": "design-xlarge",
+					"size": "2.438rem",
+					"name": "Xlarge"
+				},
+				{
+					"slug": "design-xxlarge",
+					"size": "3.063rem",
+					"name": "XXlarge"
 				}
 			]
 		},
@@ -34,120 +109,161 @@
 			"gradients": [],
 			"palette": [
 				{
-					"color": "#425a5e",
-					"slug": "primary-100",
-					"name": "Primary 100"
+					"color": "#FFFFFF",
+					"slug": "white",
+					"name": "White"
 				},
 				{
-					"color": "#2d3d40",
-					"slug": "primary-200",
-					"name": "Primary 200"
+					"color": "#000000",
+					"slug": "black",
+					"name": "Black"
 				},
 				{
-					"color": "#3f4040",
-					"slug": "primary-300",
-					"name": "Primary 300"
+					"color": "#C5C5C5",
+					"slug": "gray-300",
+					"name": "Gray 300"
 				},
 				{
-					"color": "#fff",
-					"slug": "secondary-100",
-					"name": "Secondary 100"
+					"color": "#7E7E7E",
+					"slug": "gray-600",
+					"name": "Gray 600"
 				},
 				{
-					"color": "#e3e4eb",
+					"color": "#141627",
+					"slug": "primary-500",
+					"name": "Primary 500"
+				},
+				{
+					"color": "#A5A8C0",
 					"slug": "secondary-200",
 					"name": "Secondary 200"
 				},
 				{
-					"color": "#d3d3d3",
-					"slug": "secondary-300",
-					"name": "Secondary 300"
+					"color": "#4A5181",
+					"slug": "secondary-400",
+					"name": "Secondary 400"
 				},
 				{
-					"color": "#f48d60",
+					"color": "#1D2661",
+					"slug": "secondary-500",
+					"name": "Secondary 500"
+				},
+				{
+					"color": "#11173A",
+					"slug": "secondary-700",
+					"name": "Secondary 700"
+				},
+				{
+					"color": "#F9D2D4",
 					"slug": "tertiary-100",
 					"name": "Tertiary 100"
 				},
 				{
-					"color": "#f47c48",
-					"slug": "tertiary-200",
-					"name": "Tertiary 200"
+					"color": "#E94D53",
+					"slug": "tertiary-400",
+					"name": "Tertiary 400"
 				},
 				{
-					"color": "#f3713c",
-					"slug": "tertiary-300",
-					"name": "Tertiary 300"
+					"color": "#E32028",
+					"slug": "tertiary-500",
+					"name": "Tertiary 500"
+				},
+				{
+					"color": "#E32028",
+					"slug": "button-1",
+					"name": "Button 1"
+				},
+				{
+					"color": "#881318",
+					"slug": "button-2",
+					"name": "Button 2"
+				},
+				{
+					"color": "#C5C5C5",
+					"slug": "button-3",
+					"name": "Button 3"
 				}
 			]
 		},
 		"layout": {
-			"contentSize": "840px",
-			"wideSize": "1100px"
+			"contentSize": "1128px",
+			"wideSize": "100vw"
 		}
 	},
-
 	"styles": {
 		"typography": {
-			"fontFamily": "var(--wp--preset--font-family--system-fonts)",
-			"fontSize": "var(--wp--preset--font-size--medium)"
+			"fontFamily": "var(--wp--preset--font-family--montserrat-sans)",
+			"fontSize": "16px"
 		},
 		"spacing": {
 			"blockGap": "var(--wp--preset--spacing--50)"
 		},
 		"color": {
 			"background": "var(--wp--preset--color--secondary-100)",
-			"text": "var(--wp--preset--color--primary-300)"
+			"text": "var(--wp--preset--color--black)"
 		},
 		"elements": {
 			"h1": {
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--huge)"
+					"fontSize": "var(--wp--preset--font-size--design-xxlarge)"
 				}
 			},
 			"h2": {
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--x-large)"
+					"fontSize": "var(--wp--preset--font-size--design-xlarge)"
 				}
 			},
 			"h3": {
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--large)"
+					"fontSize": "var(--wp--preset--font-size--design-large)"
 				}
 			},
 			"h4": {
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--medium)"
+					"fontSize": "var(--wp--preset--font-size--design-medium)"
 				}
 			},
 			"h5": {
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--normal)"
+					"fontSize": "var(--wp--preset--font-size--design-headline)"
 				}
 			},
 			"button": {
+				"color": {
+					"background": "var(--wp--preset--color--button-1)",
+					"text": "var(--wp--preset--color--white)"
+				},
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--design-button)"
+				},
 				":hover": {
 					"color": {
-						"background": "var(--wp--preset--color--tertiary-300)"
+						"background": "var(--wp--preset--color--button-2)"
 					}
 				},
 				":focus": {
 					"color": {
-						"background": "var(--wp--preset--color--tertiary-200)"
+						"background": "var(--wp--preset--color--button-2)"
 					}
 				},
 				":active": {
 					"color": {
-						"background": "var(--wp--preset--color--tertiary-200)"
+						"background": "var(--wp--preset--color--button-2)"
 					}
 				}
 			},
 			"link": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--design-body)"
+				},
 				"color": {
-					"text": "var(--wp--preset--color--tertiary-300)"
+					"text": "var(--wp--preset--color--button-1)"
 				},
 				":active": {
 					"color": {
-						"text": { "ref": "styles.color.text" }
+						"text": {
+							"ref": "styles.color.text"
+						}
 					}
 				}
 			}
@@ -391,7 +507,6 @@
 			}
 		}
 	},
-
 	"templateParts": [
 		{
 			"name": "header",
