@@ -412,7 +412,11 @@
 	"customTemplates": [
 		{
 			"name": "blank",
-			"title": "Blank Tempate"
+			"title": "Blank"
+		},
+		{
+			"name": "no-title",
+			"title": "No Title"
 		}
 	],
 	"version": 2,
