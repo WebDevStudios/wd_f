@@ -14,6 +14,7 @@ The WebDev FSE Starter Block Theme
 	- [Quick Start](#quick-start)
 - [Setup](#setup)
 	- [Development](#development)
+	- [Building a block with wpcli](#building-a-block-with-wpcli)
 - [Contributing and Support](#contributing-and-support)
 
 ## Introduction
@@ -51,6 +52,7 @@ You'll need to change all instances of the name: `wd_f`.
 - Search for: `@package wd_f` and replace with: `@package project_name` to capture the package name
 - Update `"WebDevStudios\wd_f,wd_f"` to: `"CompanyName\project_name,project_name"` (with double quotes) in phpcs.xml.dist
 - Search for: `WebDevStudios\wd_f` and replace with: `CompanyName\project_name` to capture the namespaces
+- Update `"WebDevStudios\wd_f,wd_f,wds"` to `"CompanyName\project_name,project_name,wds"` (with double quotes) in phpcs.xml.dist
 - Update `"webdevstudios/wd_f"` to `"companyname/project_name"` (with double quotes) in composer.json
 - Search for: `, 'wd_f'` and replace with: `, 'project_name'` (inside backticks) to capture the text domain
 - Update `Text Domain: wd_f` to: `Text Domain: project_name` in style.css
