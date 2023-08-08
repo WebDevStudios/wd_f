@@ -33,5 +33,5 @@ pre-commit:
         exit-status:
             run: echo "All pre-commit checks passed"
         templates-exclude:
-            glob: 'themes/wds-project-theme/templates/**/*.php'
+            glob: 'templates/**/*.php'
             run: echo "Skipping templates folder"
