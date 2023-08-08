@@ -51,15 +51,6 @@ function setup() {
 	add_theme_support( 'post-thumbnails' );
 	add_image_size( 'full-width', 1920, 1080, false );
 
-	// Register navigation menus.
-	register_nav_menus(
-		[
-			'primary' => esc_html__( 'Primary Menu', 'wd_f' ),
-			'footer'  => esc_html__( 'Footer Menu', 'wd_f' ),
-			'mobile'  => esc_html__( 'Mobile Menu', 'wd_f' ),
-		]
-	);
-
 	/**
 	 * Switch default core markup for search form, comment form, and comments
 	 * to output valid HTML5.
@@ -77,18 +68,6 @@ function setup() {
 		]
 	);
 
-	// Set up the WordPress core custom background feature.
-	add_theme_support(
-		'custom-background',
-		apply_filters(
-			'wd_f_custom_background_args',
-			[
-				'default-color' => 'ffffff',
-				'default-image' => '',
-			]
-		)
-	);
-
 	// Custom logo support.
 	add_theme_support(
 		'custom-logo',
@@ -100,9 +79,6 @@ function setup() {
 			'header-text' => [ 'site-title', 'site-description' ],
 		]
 	);
-
-	// Add theme support for selective refresh for widgets.
-	add_theme_support( 'customize-selective-refresh-widgets' );
 
 	// Gutenberg support for full-width/wide alignment of supported blocks.
 	add_theme_support( 'align-wide' );
