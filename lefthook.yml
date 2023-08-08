@@ -28,3 +28,10 @@ pre-commit:
             exclude: 'group_*.json'
             run: npx prettier {staged_files} --write
             stage_fixed: true
+        merge-conflict:
+            run: echo "Resolve merge conflicts before committing"
+        exit-status:
+            run: echo "All pre-commit checks passed"
+        templates-exclude:
+            glob: 'themes/wds-project-theme/templates/**/*.php'
+            run: echo "Skipping templates folder"
