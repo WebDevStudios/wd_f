@@ -60,7 +60,7 @@
 		"webpack-merge": "^5.9.0"
 	},
 	"scripts": {
-		"accessibility": "pa11y-ci --reporter=pa11y-ci-reporter-html --sitemap $npm_config_url/sitemap.xml",
+		"a11y": "pa11y-ci --reporter=pa11y-ci-reporter-html --sitemap $npm_config_url/sitemap.xml",
 		"build": "cross-env NODE_ENV=production wp-scripts build --config webpack.prod.js",
 		"build:pot": "composer run-script pot",
 		"build:all": "composer install --quiet && composer run-script pot && npm run build",
