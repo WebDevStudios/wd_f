@@ -68,18 +68,6 @@ function setup() {
 		]
 	);
 
-	// Custom logo support.
-	add_theme_support(
-		'custom-logo',
-		[
-			'height'      => 250,
-			'width'       => 500,
-			'flex-height' => true,
-			'flex-width'  => true,
-			'header-text' => [ 'site-title', 'site-description' ],
-		]
-	);
-
 	// Gutenberg support for full-width/wide alignment of supported blocks.
 	add_theme_support( 'align-wide' );
 
