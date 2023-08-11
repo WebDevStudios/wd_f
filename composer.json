@@ -20,7 +20,8 @@
 		"sort-packages": true
 	},
 	"require": {
-		"composer/installers": "^1.5 || ^2.0.0"
+		"composer/installers": "^1.5 || ^2.0.0",
+		"erusev/parsedown": "^1.7"
 	},
 	"require-dev": {
 		"dealerdirect/phpcodesniffer-composer-installer": "^1.0.0",
