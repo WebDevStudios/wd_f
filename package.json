@@ -1,6 +1,6 @@
 {
 	"name": "wd_f",
-	"version": "3.5.0",
+	"version": "1.0.0",
 	"private": true,
 	"description": "A starter block theme from WebDevStudios.",
 	"author": "WebDevStudios <contact@webdevstudios.com>",
@@ -19,7 +19,7 @@
 	},
 	"engines": {
 		"node": ">=18",
-		"npm": ">=8"
+		"npm": ">=9"
 	},
 	"dependencies": {
 		"@wordpress/eslint-plugin": "14.11.0",
@@ -60,7 +60,7 @@
 		"webpack-merge": "^5.9.0"
 	},
 	"scripts": {
-		"accessibility": "pa11y-ci --reporter=pa11y-ci-reporter-html --sitemap $npm_config_url/sitemap.xml",
+		"a11y": "pa11y-ci --reporter=pa11y-ci-reporter-html --sitemap $npm_config_url/sitemap.xml",
 		"build": "cross-env NODE_ENV=production wp-scripts build --config webpack.prod.js",
 		"build:pot": "composer run-script pot",
 		"build:all": "composer install --quiet && composer run-script pot && npm run build",
