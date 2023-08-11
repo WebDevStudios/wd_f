@@ -59,7 +59,7 @@ class Blocks_Scaffold {
 	 *
 	 * ## EXAMPLES
 	 *
-	 * wp abs create_portable_block myblock --title="This is myblock" --desc="This block is used for wds." --keyword="myblock" --icon="table-row-before" --namespace="WebDevStudios\wd_f"
+	 * wp wds create_portable_block myblock --title="This is myblock" --desc="This block is used for wds." --keyword="myblock" --icon="table-row-before" --namespace="wds"
 	 * @since  2.0.0
 	 * @param string $name The block name.
 	 * @param array  $assoc_args The block args.
@@ -257,7 +257,7 @@ class Blocks_Scaffold {
  * @return void
  */
 function cli_register_commands() {
-	WP_CLI::add_command( 'abs', __NAMESPACE__ . '\Blocks_Scaffold' );
+	WP_CLI::add_command( 'wds', __NAMESPACE__ . '\Blocks_Scaffold' );
 }
 add_action( 'cli_init', __NAMESPACE__ . '\cli_register_commands' );
 
