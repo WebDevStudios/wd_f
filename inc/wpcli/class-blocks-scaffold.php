@@ -199,7 +199,7 @@ class Blocks_Scaffold {
 	}
 
 	/**
-	 * Create the block editor styles.
+	 * Create the block editor assets.
 	 *
 	 * @since 2.0.0
 	 * @author Biplav Subedi <biplav.subedi@webdevstudios.com>
@@ -208,7 +208,7 @@ class Blocks_Scaffold {
 		$asset_js  = ROOT_PATH . 'inc/wpcli/block-starter/editor.js';
 		$asset_php = ROOT_PATH . 'inc/wpcli/block-starter/editor.asset.php';
 
-		$asset_scss = ROOT_PATH . 'inc/wpcli/block-starter/style.scss';
+		$asset_scss = ROOT_PATH . 'inc/wpcli/block-starter/editor.scss';
 
 		if (
 			! $this->init_filesystem()->exists( $asset_js )
