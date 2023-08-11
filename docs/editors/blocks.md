@@ -22,8 +22,3 @@ or upload from your computer.</li>
 </ol>
 
 </details>
-
-{% capture details %}
-DETAILS
-{% endcapture %}
-{% capture summary %}SUMMARY{% endcapture %}{% include details.html %}
