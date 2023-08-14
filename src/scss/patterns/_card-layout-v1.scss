@@ -9,7 +9,7 @@
 
 	&:hover {
 		/* stylelint-disable-next-line declaration-no-important */
-		border: 1px solid var( --wp--preset--color--tertiary-500 ) !important;
+		border: 1px solid var(--wp--preset--color--tertiary-500) !important;
 	}
 
 	.wp-block-image {
@@ -21,6 +21,6 @@
 		position: relative;
 	}
 	.date-container {
-		color: var( --wp--preset--color--gray-600 );
+		color: var(--wp--preset--color--gray-600);
 	}
 }
