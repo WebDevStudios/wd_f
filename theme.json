@@ -105,8 +105,25 @@
 			"defaultPalette": false,
 			"link": true,
 			"text": true,
-			"duotone": [],
-			"gradients": [],
+			"duotone": [
+				{
+					"colors": ["#E94D53", "#4A5181"],
+					"slug": "pink-and-blue",
+					"name": "Pink and Blue"
+				}
+			],
+			"gradients": [
+				{
+					"gradient": "linear-gradient(180deg, rgba(74,81,129,1) 0%, rgba(233,77,83,1) 100%);",
+					"slug": "pink-to-blue",
+					"name": "Pink to Blue"
+				},
+				{
+					"gradient": "linear-gradient(180deg, rgba(74, 81, 129, 1) 0%, rgba(29, 38, 97, 1) 100%);",
+					"slug": "blue-light-to-dark",
+					"name": "Blue light to dark"
+				}
+			],
 			"palette": [
 				{
 					"color": "#FFFFFF",
@@ -137,6 +154,11 @@
 					"color": "#A5A8C0",
 					"slug": "secondary-200",
 					"name": "Secondary 200"
+				},
+				{
+					"color": "#777da0",
+					"slug": "secondary-300",
+					"name": "Secondary 300"
 				},
 				{
 					"color": "#4A5181",
@@ -199,7 +221,7 @@
 			"blockGap": "var(--wp--preset--spacing--50)"
 		},
 		"color": {
-			"background": "var(--wp--preset--color--secondary-100)",
+			"background": "var(--wp--preset--color--white)",
 			"text": "var(--wp--preset--color--black)"
 		},
 		"elements": {
@@ -507,10 +529,16 @@
 			}
 		}
 	},
+
 	"templateParts": [
 		{
 			"name": "header",
 			"title": "Header",
+			"area": "header"
+		},
+		{
+			"name": "header-home",
+			"title": "Header-Home",
 			"area": "header"
 		},
 		{
