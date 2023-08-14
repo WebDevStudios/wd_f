@@ -14,6 +14,7 @@ The WebDev FSE Starter Block Theme
 	- [Quick Start](#quick-start)
 - [Setup](#setup)
 	- [Development](#development)
+	- [Building a block with wpcli](#building-a-block-with-wpcli)
 - [Contributing and Support](#contributing-and-support)
 
 ## Introduction
@@ -51,6 +52,7 @@ You'll need to change all instances of the name: `wd_f`.
 - Search for: `@package wd_f` and replace with: `@package project_name` to capture the package name
 - Update `"WebDevStudios\wd_f,wd_f"` to: `"CompanyName\project_name,project_name"` (with double quotes) in phpcs.xml.dist
 - Search for: `WebDevStudios\wd_f` and replace with: `CompanyName\project_name` to capture the namespaces
+- Update `"WebDevStudios\wd_f,wd_f,wds"` to `"CompanyName\project_name,project_name,wds"` (with double quotes) in phpcs.xml.dist
 - Update `"webdevstudios/wd_f"` to `"companyname/project_name"` (with double quotes) in composer.json
 - Search for: `, 'wd_f'` and replace with: `, 'project_name'` (inside backticks) to capture the text domain
 - Update `Text Domain: wd_f` to: `Text Domain: project_name` in style.css
@@ -98,7 +100,7 @@ In order to build a block, run the following wpcli script.
 Note: If you're using Local, you can open the shell from within Local to do this. `Sitename -> Open site shell`.
 
 ```bash
-wp abs create_portable_block myblock --title="This is myblock" --desc="This block is used for wds." --keyword="myblock" --icon="table-row-before" --namespace="wds"
+wp wds create_portable_block myblock --title="This is myblock" --desc="This block is used for wds." --keyword="myblock" --icon="table-row-before" --namespace="wds"
 ```
 
 This will scaffold out a block inside of the `blocks` folder in the theme. Replace `myblock` with the name of your block and update the other items `title`, `desc`, `keyword`, `icon`, `namespace` with the appropriate information.

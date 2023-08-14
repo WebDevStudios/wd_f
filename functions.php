@@ -16,7 +16,6 @@ namespace WebDevStudios\wd_f;
  */
 function include_inc_files() {
 	$files = [
-		'inc/customizer/customizer.php', // Customizer additions.
 		'inc/functions/', // Custom functions that act independently of the theme templates.
 		'inc/hooks/', // Load custom filters and hooks.
 		'inc/post-types/', // Load custom post types.
