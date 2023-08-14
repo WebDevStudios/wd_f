@@ -1,0 +1,26 @@
+.card-layout-v1 {
+	width: 310px;
+	height: 380px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	// border: 1px solid var(--wp--preset--color--secondary-300);
+	transition: all 0.5s;
+
+	&:hover {
+		/* stylelint-disable-next-line declaration-no-important */
+		border: 1px solid var( --wp--preset--color--tertiary-500 ) !important;
+	}
+
+	.wp-block-image {
+		object-fit: cover;
+		height: 185px;
+		width: 100%;
+	}
+	.wp-block-heading {
+		position: relative;
+	}
+	.date-container {
+		color: var( --wp--preset--color--gray-600 );
+	}
+}

@@ -1,0 +1,23 @@
+.card-layout-v2 {
+	width: 100%;
+	height: auto;
+	display: flex;
+	position: relative;
+	.wp-block-group.alignfull{
+		width: 100%;
+	}
+
+	.wp-block-image img{
+		object-fit: cover;
+		aspect-ratio: 3 / 2;
+		max-width: 260px;
+		max-width: 250px;
+		display: inline-block;
+	}
+	.wp-block-heading {
+		position: relative;
+	}
+	.date-container {
+		color: var( --wp--preset--color--gray-600 );
+	}
+}
