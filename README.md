@@ -14,11 +14,12 @@ The WebDev FSE Starter Block Theme
 	- [Quick Start](#quick-start)
 - [Setup](#setup)
 	- [Development](#development)
+	- [Building a block with wpcli](#building-a-block-with-wpcli)
 - [Contributing and Support](#contributing-and-support)
 
 ## Introduction
 
-`wd_f`, also known as `WebDev FSE`, is an exciting and experimental sister theme of [wd_s](https://github.com/WebDevStudios/wd_s), specifically designed for those ready to dive into the world of full site editing. This cutting-edge theme is meant for hacking and exploration, allowing you to unleash your creativity and transform it into the next incredible WordPress theme.
+`wd_f`, also known as `WebDev FSE` or `funderscores`, is an exciting and experimental sister theme of [wd_s](https://github.com/WebDevStudios/wd_s), specifically designed for those ready to dive into the world of full site editing. This cutting-edge theme is meant for hacking and exploration, allowing you to unleash your creativity and transform it into the next incredible WordPress theme.
 
 As a starter block theme, `wd_f` provides a solid foundation for your WordPress journey. However, it is important to note that it is not intended to be used as a Parent Theme. Instead, it is the perfect canvas for you to customize, modify, and shape into the most awesome WordPress theme you can imagine.
 
@@ -51,6 +52,7 @@ You'll need to change all instances of the name: `wd_f`.
 - Search for: `@package wd_f` and replace with: `@package project_name` to capture the package name
 - Update `"WebDevStudios\wd_f,wd_f"` to: `"CompanyName\project_name,project_name"` (with double quotes) in phpcs.xml.dist
 - Search for: `WebDevStudios\wd_f` and replace with: `CompanyName\project_name` to capture the namespaces
+- Update `"WebDevStudios\wd_f,wd_f,wds"` to `"CompanyName\project_name,project_name,wds"` (with double quotes) in phpcs.xml.dist
 - Update `"webdevstudios/wd_f"` to `"companyname/project_name"` (with double quotes) in composer.json
 - Search for: `, 'wd_f'` and replace with: `, 'project_name'` (inside backticks) to capture the text domain
 - Update `Text Domain: wd_f` to: `Text Domain: project_name` in style.css
@@ -98,7 +100,7 @@ In order to build a block, run the following wpcli script.
 Note: If you're using Local, you can open the shell from within Local to do this. `Sitename -> Open site shell`.
 
 ```bash
-wp abs create_portable_block myblock --title="This is myblock" --desc="This block is used for wds." --keyword="myblock" --icon="table-row-before" --namespace="wds"
+wp wds create_portable_block myblock --title="This is myblock" --desc="This block is used for wds." --keyword="myblock" --icon="table-row-before" --namespace="wds"
 ```
 
 This will scaffold out a block inside of the `blocks` folder in the theme. Replace `myblock` with the name of your block and update the other items `title`, `desc`, `keyword`, `icon`, `namespace` with the appropriate information.
