@@ -22,7 +22,7 @@ pre-commit:
             run: npx eslint {staged_files} --fix
         lintmarkdown:
             glob: '*.{md}'
-            run: npx markdownlint-cli {staged_files} --fix --disable MD033
+            run: npx markdownlint-cli {staged_files} --fix
         other:
             glob: '*.{yml,json,html}'
             exclude: 'group_*.json'  # Exclude specific files
