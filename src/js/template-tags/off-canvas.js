@@ -6,12 +6,13 @@
 
 // Make sure everything is loaded first.
 if (
-	('complete' === document.readyState || 'loading' !== document.readyState) &&
-	!document.documentElement.doScroll
+	( 'complete' === document.readyState ||
+		'loading' !== document.readyState ) &&
+	! document.documentElement.doScroll
 ) {
 	wdsOffCanvas();
 } else {
-	document.addEventListener('DOMContentLoaded', wdsOffCanvas);
+	document.addEventListener( 'DOMContentLoaded', wdsOffCanvas );
 }
 
 /**
@@ -21,18 +22,20 @@ if (
  * @since January 31, 2020
  */
 function wdsOffCanvas() {
-	const offCanvasScreen = document.querySelector('.off-canvas-screen');
+	const offCanvasScreen = document.querySelector( '.off-canvas-screen' );
 
-	if (!offCanvasScreen) {
+	if ( ! offCanvasScreen ) {
 		return;
 	}
 
-	const offCanvasContainer = document.querySelector('.off-canvas-container'),
-		offCanvasOpen = document.querySelector('.off-canvas-open');
+	const offCanvasContainer = document.querySelector(
+			'.off-canvas-container'
+		),
+		offCanvasOpen = document.querySelector( '.off-canvas-open' );
 
-	offCanvasOpen.addEventListener('click', toggleOffCanvas);
-	offCanvasScreen.addEventListener('click', closeOffCanvas);
-	document.body.addEventListener('keydown', closeOnEscape);
+	offCanvasOpen.addEventListener( 'click', toggleOffCanvas );
+	offCanvasScreen.addEventListener( 'click', closeOffCanvas );
+	document.body.addEventListener( 'keydown', closeOnEscape );
 
 	/**
 	 * Close everything when we hit the escape key.
@@ -41,8 +44,8 @@ function wdsOffCanvas() {
 	 * @since January 31, 2020
 	 * @param {Object} event The event trigger.
 	 */
-	function closeOnEscape(event) {
-		if (27 === event.keyCode) {
+	function closeOnEscape( event ) {
+		if ( 27 === event.keyCode ) {
 			closeOffCanvas();
 		}
 	}
@@ -54,12 +57,12 @@ function wdsOffCanvas() {
 	 * @since January 31, 2020
 	 */
 	function closeOffCanvas() {
-		offCanvasContainer.classList.remove('is-visible');
-		offCanvasOpen.classList.remove('is-visible');
-		offCanvasScreen.classList.remove('is-visible');
+		offCanvasContainer.classList.remove( 'is-visible' );
+		offCanvasOpen.classList.remove( 'is-visible' );
+		offCanvasScreen.classList.remove( 'is-visible' );
 
-		offCanvasContainer.setAttribute('aria-hidden', true);
-		offCanvasOpen.setAttribute('aria-expanded', false);
+		offCanvasContainer.setAttribute( 'aria-hidden', true );
+		offCanvasOpen.setAttribute( 'aria-expanded', false );
 	}
 
 	/**
@@ -69,7 +72,7 @@ function wdsOffCanvas() {
 	 * @since January 31, 2020
 	 */
 	function toggleOffCanvas() {
-		if ('true' === offCanvasOpen.getAttribute('aria-expanded')) {
+		if ( 'true' === offCanvasOpen.getAttribute( 'aria-expanded' ) ) {
 			closeOffCanvas();
 		} else {
 			openOffCanvas();
@@ -83,11 +86,11 @@ function wdsOffCanvas() {
 	 * @since January 31, 2020
 	 */
 	function openOffCanvas() {
-		offCanvasContainer.classList.add('is-visible');
-		offCanvasOpen.classList.add('is-visible');
-		offCanvasScreen.classList.add('is-visible');
+		offCanvasContainer.classList.add( 'is-visible' );
+		offCanvasOpen.classList.add( 'is-visible' );
+		offCanvasScreen.classList.add( 'is-visible' );
 
-		offCanvasContainer.setAttribute('aria-hidden', false);
-		offCanvasOpen.setAttribute('aria-expanded', true);
+		offCanvasContainer.setAttribute( 'aria-hidden', false );
+		offCanvasOpen.setAttribute( 'aria-expanded', true );
 	}
 }

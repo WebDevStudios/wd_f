@@ -6,12 +6,13 @@
 
 // Make sure everything is loaded first.
 if (
-	('complete' === document.readyState || 'loading' !== document.readyState) &&
-	!document.documentElement.doScroll
+	( 'complete' === document.readyState ||
+		'loading' !== document.readyState ) &&
+	! document.documentElement.doScroll
 ) {
 	wdsModals();
 } else {
-	document.addEventListener('DOMContentLoaded', wdsModals);
+	document.addEventListener( 'DOMContentLoaded', wdsModals );
 }
 
 /**
@@ -21,21 +22,21 @@ if (
  * @since January 31, 2020
  */
 function wdsModals() {
-	const modalTrigger = document.querySelectorAll('.modal-trigger'),
-		modalClose = document.querySelectorAll('.modal .close'),
+	const modalTrigger = document.querySelectorAll( '.modal-trigger' ),
+		modalClose = document.querySelectorAll( '.modal .close' ),
 		pageBody = document.body;
 
 	// Loop through each modal trigger on the page and add a listener for its header.
-	modalTrigger.forEach((trigger) => {
-		trigger.addEventListener('click', openModal);
-	});
+	modalTrigger.forEach( ( trigger ) => {
+		trigger.addEventListener( 'click', openModal );
+	} );
 
-	modalClose.forEach((trigger) => {
-		trigger.addEventListener('click', closeModalOnCloseButton);
-	});
+	modalClose.forEach( ( trigger ) => {
+		trigger.addEventListener( 'click', closeModalOnCloseButton );
+	} );
 
-	pageBody.addEventListener('keydown', closeOnEscape);
-	pageBody.addEventListener('click', closeOnClick);
+	pageBody.addEventListener( 'keydown', closeOnEscape );
+	pageBody.addEventListener( 'click', closeOnClick );
 
 	/**
 	 * Open a modal when we trigger it.
@@ -44,18 +45,19 @@ function wdsModals() {
 	 * @since January 31, 2020
 	 * @param {Object} event The triggered event.
 	 */
-	function openModal(event) {
+	function openModal( event ) {
 		const thisTarget = event.target,
-			thisModalTarget = thisTarget.getAttribute('data-target'),
-			thisModal = document.querySelector(thisModalTarget),
-			focusableChildren = thisModal.querySelectorAll('a, input, button');
+			thisModalTarget = thisTarget.getAttribute( 'data-target' ),
+			thisModal = document.querySelector( thisModalTarget ),
+			focusableChildren =
+				thisModal.querySelectorAll( 'a, input, button' );
 
-		pageBody.classList.add('modal-open');
-		thisModal.classList.add('modal-open');
-		thisModal.setAttribute('aria-hidden', false);
+		pageBody.classList.add( 'modal-open' );
+		thisModal.classList.add( 'modal-open' );
+		thisModal.setAttribute( 'aria-hidden', false );
 
-		if (0 < focusableChildren.length) {
-			focusableChildren[0].focus();
+		if ( 0 < focusableChildren.length ) {
+			focusableChildren[ 0 ].focus();
 		}
 	}
 
@@ -66,21 +68,21 @@ function wdsModals() {
 	 * @since January 31, 2020
 	 * @param {Object} event The triggered event.
 	 */
-	function closeModalOnCloseButton(event) {
+	function closeModalOnCloseButton( event ) {
 		const thisTarget = event.target,
-			thisModalTarget = thisTarget.getAttribute('data-target'),
-			thisModal = document.querySelector(thisModalTarget),
-			modalIframe = thisModal.querySelector('iframe');
+			thisModalTarget = thisTarget.getAttribute( 'data-target' ),
+			thisModal = document.querySelector( thisModalTarget ),
+			modalIframe = thisModal.querySelector( 'iframe' );
 
-		pageBody.classList.remove('modal-open');
-		thisModal.classList.remove('modal-open');
-		thisModal.setAttribute('aria-hidden', true);
+		pageBody.classList.remove( 'modal-open' );
+		thisModal.classList.remove( 'modal-open' );
+		thisModal.setAttribute( 'aria-hidden', true );
 
-		if (modalIframe) {
-			const iframeURL = modalIframe.getAttribute('src');
+		if ( modalIframe ) {
+			const iframeURL = modalIframe.getAttribute( 'src' );
 
-			modalIframe.setAttribute('src', '');
-			modalIframe.setAttribute('src', iframeURL);
+			modalIframe.setAttribute( 'src', '' );
+			modalIframe.setAttribute( 'src', iframeURL );
 		}
 	}
 
@@ -91,23 +93,24 @@ function wdsModals() {
 	 * @since January 31, 2020
 	 * @param {Object} event The triggered event.
 	 */
-	function closeOnEscape(event) {
-		if (!pageBody.classList.contains('modal-open')) {
+	function closeOnEscape( event ) {
+		if ( ! pageBody.classList.contains( 'modal-open' ) ) {
 			return;
 		}
 
-		const currentlyOpenModal = document.querySelector('.modal.modal-open'),
-			modalIframe = currentlyOpenModal.querySelector('iframe');
+		const currentlyOpenModal =
+				document.querySelector( '.modal.modal-open' ),
+			modalIframe = currentlyOpenModal.querySelector( 'iframe' );
 
-		if (27 === event.keyCode) {
-			currentlyOpenModal.setAttribute('aria-hidden', true);
-			currentlyOpenModal.classList.remove('modal-open');
-			pageBody.classList.remove('modal-open');
+		if ( 27 === event.keyCode ) {
+			currentlyOpenModal.setAttribute( 'aria-hidden', true );
+			currentlyOpenModal.classList.remove( 'modal-open' );
+			pageBody.classList.remove( 'modal-open' );
 
-			if (modalIframe) {
-				const iframeURL = modalIframe.getAttribute('src');
-				modalIframe.setAttribute('src', '');
-				modalIframe.setAttribute('src', iframeURL);
+			if ( modalIframe ) {
+				const iframeURL = modalIframe.getAttribute( 'src' );
+				modalIframe.setAttribute( 'src', '' );
+				modalIframe.setAttribute( 'src', iframeURL );
 			}
 		}
 	}
@@ -119,22 +122,22 @@ function wdsModals() {
 	 * @since January 31, 2020
 	 * @param {Object} event The triggered event.
 	 */
-	function closeOnClick(event) {
+	function closeOnClick( event ) {
 		const clickedElement = event.target;
 
-		if (pageBody.classList.contains('modal-open')) {
-			if (clickedElement.classList.contains('modal-open')) {
-				const modalIframe = clickedElement.querySelector('iframe');
+		if ( pageBody.classList.contains( 'modal-open' ) ) {
+			if ( clickedElement.classList.contains( 'modal-open' ) ) {
+				const modalIframe = clickedElement.querySelector( 'iframe' );
 
-				pageBody.classList.remove('modal-open');
-				clickedElement.classList.remove('modal-open');
-				clickedElement.setAttribute('aria-hidden', true);
+				pageBody.classList.remove( 'modal-open' );
+				clickedElement.classList.remove( 'modal-open' );
+				clickedElement.setAttribute( 'aria-hidden', true );
 
-				if (modalIframe) {
-					const iframeURL = modalIframe.getAttribute('src');
+				if ( modalIframe ) {
+					const iframeURL = modalIframe.getAttribute( 'src' );
 
-					modalIframe.setAttribute('src', '');
-					modalIframe.setAttribute('src', iframeURL);
+					modalIframe.setAttribute( 'src', '' );
+					modalIframe.setAttribute( 'src', iframeURL );
 				}
 			}
 		}

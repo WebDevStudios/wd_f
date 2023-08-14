@@ -4,13 +4,13 @@
  * Helpers for the primary navigation.
  */
 
-(function () {
+( function () {
 	const subMenuParentItem = document.querySelectorAll(
 		'.main-navigation .menu-item-has-children'
 	);
 
-	document.addEventListener('DOMContentLoaded', addDownArrow);
-	document.addEventListener('DOMContentLoaded', toggleFocusClass);
+	document.addEventListener( 'DOMContentLoaded', addDownArrow );
+	document.addEventListener( 'DOMContentLoaded', toggleFocusClass );
 
 	/**
 	 * Adds the down arrow to parent menu items.
@@ -19,11 +19,11 @@
 	 * @since January 31, 2020
 	 */
 	function addDownArrow() {
-		subMenuParentItem.forEach((parentItem) => {
-			const menuItem = parentItem.querySelector('a');
+		subMenuParentItem.forEach( ( parentItem ) => {
+			const menuItem = parentItem.querySelector( 'a' );
 			menuItem.innerHTML +=
 				'<span class="caret-down" aria-hidden="true"></span>';
-		});
+		} );
 	}
 
 	/**
@@ -33,10 +33,10 @@
 	 * @since January 31, 2020
 	 */
 	function toggleFocusClass() {
-		subMenuParentItem.forEach((parentItem) => {
-			parentItem.addEventListener('focusin', toggleIn);
-			parentItem.addEventListener('focusout', toggleOut);
-		});
+		subMenuParentItem.forEach( ( parentItem ) => {
+			parentItem.addEventListener( 'focusin', toggleIn );
+			parentItem.addEventListener( 'focusout', toggleOut );
+		} );
 	}
 
 	/**
@@ -46,14 +46,14 @@
 	 * @since January 31, 2020
 	 * @param {Object} event The triggered event.
 	 */
-	function toggleIn(event) {
+	function toggleIn( event ) {
 		const parentMenuItems = getParents(
 			event.target.parentNode,
 			'.menu-item-has-children'
 		);
-		parentMenuItems.forEach((parentItem) => {
-			parentItem.classList.add('focus');
-		});
+		parentMenuItems.forEach( ( parentItem ) => {
+			parentItem.classList.add( 'focus' );
+		} );
 	}
 
 	/**
@@ -63,14 +63,14 @@
 	 * @author Corey Collins
 	 * @param {Object} event The triggered event.
 	 */
-	function toggleOut(event) {
+	function toggleOut( event ) {
 		const parentMenuItems = getParents(
 			event.target.parentNode,
 			'.menu-item-has-children'
 		);
-		parentMenuItems.forEach((parentItem) => {
-			parentItem.classList.remove('focus');
-		});
+		parentMenuItems.forEach( ( parentItem ) => {
+			parentItem.classList.remove( 'focus' );
+		} );
 	}
 
 	/**
@@ -83,21 +83,21 @@
 	 * @param {string} selector The CSS class of the element.
 	 * @return {Array} Parents.
 	 */
-	const getParents = function (elem, selector) {
+	const getParents = function ( elem, selector ) {
 		// Element.matches() polyfill.
-		if (!Element.prototype.matches) {
+		if ( ! Element.prototype.matches ) {
 			Element.prototype.matches =
 				Element.prototype.matchesSelector ||
 				Element.prototype.mozMatchesSelector ||
 				Element.prototype.msMatchesSelector ||
 				Element.prototype.oMatchesSelector ||
 				Element.prototype.webkitMatchesSelector ||
-				function (s) {
+				function ( s ) {
 					const matches = (
 						this.document || this.ownerDocument
-					).querySelectorAll(s);
+					).querySelectorAll( s );
 					let i = matches.length;
-					while (0 >= --i && matches.item(i) !== this) {}
+					while ( 0 >= --i && matches.item( i ) !== this ) {}
 					return -1 > i;
 				};
 		}
@@ -106,17 +106,17 @@
 		const parents = [];
 
 		// Get matching parent elements.
-		for (; elem && elem !== document; elem = elem.parentNode) {
+		for ( ; elem && elem !== document; elem = elem.parentNode ) {
 			// Add matching parents to array.
-			if (selector) {
-				if (elem.matches(selector)) {
-					parents.push(elem);
+			if ( selector ) {
+				if ( elem.matches( selector ) ) {
+					parents.push( elem );
 				}
 			} else {
-				parents.push(elem);
+				parents.push( elem );
 			}
 		}
 
 		return parents;
 	};
-})();
+} )();

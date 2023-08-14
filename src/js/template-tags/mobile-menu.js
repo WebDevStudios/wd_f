@@ -6,12 +6,13 @@
 
 // Make sure everything is loaded first.
 if (
-	('complete' === document.readyState || 'loading' !== document.readyState) &&
-	!document.documentElement.doScroll
+	( 'complete' === document.readyState ||
+		'loading' !== document.readyState ) &&
+	! document.documentElement.doScroll
 ) {
 	wdsMobileMenu();
 } else {
-	document.addEventListener('DOMContentLoaded', wdsMobileMenu);
+	document.addEventListener( 'DOMContentLoaded', wdsMobileMenu );
 }
 
 /**
@@ -25,18 +26,18 @@ function wdsMobileMenu() {
 		'.mobile-menu li.menu-item-has-children, .utility-navigation li.menu-item-has-children'
 	);
 
-	subMenuParentItem.forEach((subMenuParent) => {
-		const menuItem = subMenuParent.querySelector('a');
+	subMenuParentItem.forEach( ( subMenuParent ) => {
+		const menuItem = subMenuParent.querySelector( 'a' );
 
 		menuItem.innerHTML +=
 			'<button type="button" aria-expanded="false" class="parent-indicator caret-down" aria-label="Open submenu"><span class="down-arrow"></span></button>';
 
-		const subMenuTrigger = document.querySelectorAll('.parent-indicator');
+		const subMenuTrigger = document.querySelectorAll( '.parent-indicator' );
 
-		subMenuTrigger.forEach((trigger) => {
-			trigger.addEventListener('click', toggleSubmenu);
-		});
-	});
+		subMenuTrigger.forEach( ( trigger ) => {
+			trigger.addEventListener( 'click', toggleSubmenu );
+		} );
+	} );
 
 	/**
 	 * Open/Close a submenu.
@@ -45,17 +46,17 @@ function wdsMobileMenu() {
 	 * @since January 31, 2020
 	 * @param {Object} event The triggered event.
 	 */
-	function toggleSubmenu(event) {
+	function toggleSubmenu( event ) {
 		event.preventDefault();
 
 		const targetElement = event.target,
 			targetParent = targetElement.parentNode.closest(
 				'.menu-item-has-children'
 			),
-			subMenu = targetParent.querySelector('ul.sub-menu');
+			subMenu = targetParent.querySelector( 'ul.sub-menu' );
 
-		closeAllSubmenus(targetParent);
-		maybeOpenSubmenu(targetParent, subMenu);
+		closeAllSubmenus( targetParent );
+		maybeOpenSubmenu( targetParent, subMenu );
 	}
 
 	/**
@@ -66,20 +67,20 @@ function wdsMobileMenu() {
 	 * @param {Object} parent  The parent menu.
 	 * @param {Object} subMenu The submenu.
 	 */
-	function maybeOpenSubmenu(parent, subMenu) {
-		if (parent.classList.contains('is-visible')) {
-			closeSubmenu(parent, subMenu);
+	function maybeOpenSubmenu( parent, subMenu ) {
+		if ( parent.classList.contains( 'is-visible' ) ) {
+			closeSubmenu( parent, subMenu );
 			return;
 		}
 
 		// Expand the list menu item, and set the corresponding button aria to true.
-		parent.classList.add('is-visible');
+		parent.classList.add( 'is-visible' );
 		parent
-			.querySelector('.parent-indicator')
-			.setAttribute('aria-expanded', true);
+			.querySelector( '.parent-indicator' )
+			.setAttribute( 'aria-expanded', true );
 
 		// Slide the menu in.
-		subMenu.classList.add('is-visible', 'animated', 'slideInLeft');
+		subMenu.classList.add( 'is-visible', 'animated', 'slideInLeft' );
 	}
 
 	/**
@@ -90,12 +91,12 @@ function wdsMobileMenu() {
 	 * @param {Object} parent  The parent item.
 	 * @param {Object} subMenu The submenu.
 	 */
-	function closeSubmenu(parent, subMenu) {
-		parent.classList.remove('is-visible');
+	function closeSubmenu( parent, subMenu ) {
+		parent.classList.remove( 'is-visible' );
 		parent
-			.querySelector('.parent-indicator')
-			.setAttribute('aria-expanded', false);
-		subMenu.classList.remove('is-visible', 'animated', 'slideInLeft');
+			.querySelector( '.parent-indicator' )
+			.setAttribute( 'aria-expanded', false );
+		subMenu.classList.remove( 'is-visible', 'animated', 'slideInLeft' );
 	}
 
 	/**
@@ -107,24 +108,28 @@ function wdsMobileMenu() {
 	 * @since January 31, 2020
 	 * @param {Object} targetParent The target parent item.
 	 */
-	function closeAllSubmenus(targetParent) {
-		const submenuSiblings = getSiblings(targetParent);
+	function closeAllSubmenus( targetParent ) {
+		const submenuSiblings = getSiblings( targetParent );
 
-		submenuSiblings.forEach((sibling) => {
-			sibling.classList.remove('is-visible');
+		submenuSiblings.forEach( ( sibling ) => {
+			sibling.classList.remove( 'is-visible' );
 
-			if (sibling.querySelector('.parent-indicator')) {
+			if ( sibling.querySelector( '.parent-indicator' ) ) {
 				sibling
-					.querySelector('.parent-indicator')
-					.setAttribute('aria-expanded', false);
+					.querySelector( '.parent-indicator' )
+					.setAttribute( 'aria-expanded', false );
 			}
 
-			if (sibling.querySelector('.sub-menu')) {
+			if ( sibling.querySelector( '.sub-menu' ) ) {
 				sibling
-					.querySelector('.sub-menu')
-					.classList.remove('is-visible', 'animated', 'slideInLeft');
+					.querySelector( '.sub-menu' )
+					.classList.remove(
+						'is-visible',
+						'animated',
+						'slideInLeft'
+					);
 			}
-		});
+		} );
 	}
 
 	/**
@@ -135,13 +140,13 @@ function wdsMobileMenu() {
 	 * @param {Object} element The element being opened.
 	 * @return {Array} List of siblings.
 	 */
-	const getSiblings = function (element) {
+	const getSiblings = function ( element ) {
 		const siblings = [];
 		let sibling = element.parentNode.firstChild;
 
-		while (sibling) {
-			if (1 === sibling.nodeType && sibling !== element) {
-				siblings.push(sibling);
+		while ( sibling ) {
+			if ( 1 === sibling.nodeType && sibling !== element ) {
+				siblings.push( sibling );
 			}
 
 			sibling = sibling.nextSibling;
