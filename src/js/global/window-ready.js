@@ -7,15 +7,14 @@
  * @since January 31, 2020
  */
 function wdsWindowReady() {
-	document.body.classList.add( 'ready' );
+	document.body.classList.add('ready');
 }
 
 if (
-	( 'complete' === document.readyState ||
-		'loading' !== document.readyState ) &&
-	! document.documentElement.doScroll
+	('complete' === document.readyState || 'loading' !== document.readyState) &&
+	!document.documentElement.doScroll
 ) {
 	wdsWindowReady();
 } else {
-	document.addEventListener( 'DOMContentLoaded', wdsWindowReady );
+	document.addEventListener('DOMContentLoaded', wdsWindowReady);
 }

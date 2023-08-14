@@ -7,28 +7,28 @@
  * @since January 31, 2020
  */
 
-( function () {
-	document.querySelectorAll( 'table' ).forEach( ( table ) => {
-		const tableHeaders = table.querySelectorAll( 'th' );
+(function () {
+	document.querySelectorAll('table').forEach((table) => {
+		const tableHeaders = table.querySelectorAll('th');
 
 		// Bail if our table has no headers set.
-		if ( 0 === tableHeaders.length ) {
+		if (0 === tableHeaders.length) {
 			return;
 		}
 
-		const tableRow = table.querySelectorAll( 'tbody tr' );
+		const tableRow = table.querySelectorAll('tbody tr');
 
-		tableRow.forEach( ( row ) => {
-			const tableCell = row.querySelectorAll( 'td' );
+		tableRow.forEach((row) => {
+			const tableCell = row.querySelectorAll('td');
 
-			tableCell.forEach( ( cell, index ) => {
-				if ( tableHeaders[ index ].textContent ) {
+			tableCell.forEach((cell, index) => {
+				if (tableHeaders[index].textContent) {
 					cell.setAttribute(
 						'data-label',
-						tableHeaders[ index ].textContent
+						tableHeaders[index].textContent
 					);
 				}
-			} );
-		} );
-	} );
-} )();
+			});
+		});
+	});
+})();

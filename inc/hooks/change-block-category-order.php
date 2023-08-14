@@ -10,8 +10,8 @@ namespace WebDevStudios\wd_f;
 /**
  * Change_block_category_order
  *
- * @param array   $categories An array of block categories.
- * @param WP_Block_Editor_Context $block_editor_context 	The current block editor context.
+ * @param array                   $categories An array of block categories.
+ * @param WP_Block_Editor_Context $block_editor_context     The current block editor context.
  * @return array The modified array of block categories.
  * @author JC Palmes <jc@webdevstudios.com>
  * @since 2023-06-02
