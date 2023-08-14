@@ -92,6 +92,7 @@ Command | Action
 `npm run report` | Gives detailed information on coding standards violations in PHP code
 
 ### Building a block with wpcli
+
 In order to build a block, run the following wpcli script.
 
 Note: If you're using Local, you can open the shell from within Local to do this. `Sitename -> Open site shell`.
