@@ -3,11 +3,11 @@
 	height: auto;
 	display: flex;
 	position: relative;
-	.wp-block-group.alignfull{
+	.wp-block-group.alignfull {
 		width: 100%;
 	}
 
-	.wp-block-image img{
+	.wp-block-image img {
 		object-fit: cover;
 		aspect-ratio: 3 / 2;
 		max-width: 260px;
@@ -18,6 +18,6 @@
 		position: relative;
 	}
 	.date-container {
-		color: var( --wp--preset--color--gray-600 );
+		color: var(--wp--preset--color--gray-600);
 	}
 }
