@@ -15,5 +15,29 @@
 		"activityBarBadge.foreground": "#fff",
 		"statusBar.background": "#f3713c",
 		"statusBar.foreground": "#fff"
+	},
+
+	"markdownlint.config": {
+		"MD033": {
+		"allowed_elements": [
+				"nobr",
+				"hr",
+				"sup",
+				"details",
+				"summary",
+				"h2",
+				"h3",
+				"p",
+				"a",
+				"b",
+				"ol",
+				"ul",
+				"li",
+				"br",
+				"i",
+				"img",
+				"code"
+			]
+		}
 	}
 }

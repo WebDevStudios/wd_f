@@ -22,7 +22,7 @@ function include_inc_files() {
 		'inc/setup/', // Theme setup.
 		'inc/shortcodes/', // Load shortcodes.
 		'inc/template-tags/', // Custom template tags for this theme.
-		'inc/wpcli/',
+		'inc/wpcli/', // WPClI to create custom blocks.
 	];
 
 	foreach ( $files as $include ) {
@@ -40,3 +40,8 @@ function include_inc_files() {
 }
 
 include_inc_files();
+
+/**
+ * Help admin documentation pages.
+ */
+require get_template_directory() . '/docs/help-admin-pages.php';
