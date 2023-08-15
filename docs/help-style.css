@@ -1,0 +1,116 @@
+/* NOTE: This is a regular css file */
+
+/* Make the content a readable width */
+[class*='wds-docs'] #wpbody-content {
+	color: #2d3d40;
+	display: flex;
+	flex-direction: column;
+	font-size: 0.85rem;
+	margin: 0 auto;
+	max-width: 1024px;
+}
+
+[class*='wds-docs'] #wpbody-content h1 {
+	font-size: 3em;
+	line-height: 1.2;
+	margin-bottom: 0;
+	text-transform: uppercase;
+}
+
+[class*='wds-docs'] #wpbody-content h2 {
+	border-bottom: 2px solid #f3713c;
+	display: block;
+	font-size: 1.75em;
+	line-height: 1.2;
+	margin-bottom: 0;
+}
+
+[class*='wds-docs'] #wpbody-content h3,
+[class*='wds-docs'] #wpbody-content h4 {
+	line-height: 1.2;
+	margin-bottom: 0;
+}
+
+[class*='wds-docs'] #wpbody-content h3 {
+	font-size: 1.25em;
+}
+
+[class*='wds-docs'] #wpbody-content h3 + p {
+	margin-block-start: 0.5em;
+}
+
+[class*='wds-docs'] #wpbody-content p {
+	font-size: inherit;
+}
+
+[class*='wds-docs'] #wpbody-content p + p {
+	font-size: inherit;
+	margin-block-start: 0;
+}
+
+[class*='wds-docs'] #wpbody-content img {
+	max-width: 100%;
+}
+
+[class*='wds-docs'] #wpbody-content a {
+	color: #f3713c;
+	text-decoration: none;
+}
+
+[class*='wds-docs'] #wpbody-content a:hover,
+[class*='wds-docs'] #wpbody-content a:focus {
+	color: #2d3d40;
+	text-decoration: none;
+}
+
+[class*='wds-docs'] #wpbody-content hr {
+	border-bottom: 2px solid #f3713c;
+	margin-top: 40px;
+	width: 100%;
+}
+
+[class*='wds-docs'] #wpbody-content details {
+	background-color: #e2e4eb;
+	border-radius: 5px;
+	color: #3d4046;
+	font-size: 0.75rem;
+	margin: 0 0 0.5rem;
+	overflow: hidden;
+	padding: 1rem;
+	max-width: 100%;
+}
+
+[class*='wds-docs'] #wpbody-content summary {
+	cursor: pointer;
+	display: block;
+	font-weight: 700;
+	padding: 0 0 0 1.2rem;
+	position: relative;
+}
+
+[class*='wds-docs'] #wpbody-content summary::before {
+	border-color: transparent transparent transparent #3d4046;
+	border-style: solid;
+	border-width: 0.4rem;
+	content: '';
+	left: 0;
+	position: absolute;
+	top: 0.2rem;
+	transform-origin: 0.2rem 50%;
+	transform: rotate( 0 );
+	transition: 0.25s transform ease;
+}
+
+[class*='wds-docs'] #wpbody-content details[open] > summary::before {
+	transform: rotate( 90deg );
+}
+
+[class*='wds-docs'] #wpbody-content details summary::-webkit-details-marker {
+	display: none;
+}
+
+[class*='wds-docs'] #wpbody-content details > ul,
+[class*='wds-docs'] #wpbody-content details > p {
+	margin-bottom: 0;
+	padding-bottom: 1rem;
+}
