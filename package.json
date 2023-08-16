@@ -46,7 +46,7 @@
 		"@evilmartians/lefthook": "^1.4.6",
 		"@wordpress/prettier-config": "^2.21.0",
 		"auto-changelog": "^2.4.0",
-		"autoprefixer": "^10.4.14",
+		"autoprefixer": "^10.4.15",
 		"browser-sync": "^2.29.3",
 		"css-loader": "^6.8.1",
 		"glob": "^10.3.3",
