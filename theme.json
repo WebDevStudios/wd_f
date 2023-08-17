@@ -8,6 +8,73 @@
 			"margin": true,
 			"padding": true
 		},
+		"shadow": {
+			"defaultPresets": false,
+			"presets": [
+				{
+					"name": "Light 100",
+					"slug": "light-100",
+					"shadow": "0 1px 1px 0 rgba(59, 40, 204, 0.1), 0 0 1px 0 rgba(59, 40, 204, 0.05)"
+				},
+				{
+					"name": "Light 200",
+					"slug": "light-200",
+					"shadow": "0 4px 8px 0 rgba(59, 40, 204, 0.1), 0 0 1px 0 rgba(59, 40, 204, 0.05)"
+
+				},
+				{
+					"name": "Light 300",
+					"slug": "light-300",
+					"shadow": "0 4px 8px 0 rgba(59, 40, 204, 0.1), 0 0 1px 0 rgba(59, 40, 204, 0.05)"
+				},
+				{
+					"name": "Light 400",
+					"slug": "light-400",
+					"shadow": "0 8px 16px 0 rgba(59, 40, 204, 0.1), 0 0 1px 0 rgba(59, 40, 204, 0.05)"
+				},
+				{
+					"name": "Light 500",
+					"slug": "light-500",
+					"shadow": "0 16px 24px 0 rgba(59, 40, 204, 0.09), 0 0 1px 0 rgba(59, 40, 204, 0.05)"
+				},
+				{
+					"name": "Light 600",
+					"slug": "light-600",
+					"shadow": "0 24px 40px 0 rgba(59, 40, 204, 0.08), 0 0 1px 0 rgba(59, 40, 204, 0.05)"
+				},
+				{
+					"name": "Primary 100",
+					"slug": "primary-100",
+					"shadow": "0 1px 1px 0 rgba(59, 40, 204, 0.1), 0 0 1px 0 rgba(59, 40, 204, 0.05)"
+				},
+				{
+					"name": "Primary 200",
+					"slug": "primary-200",
+					"shadow": "0 4px 8px 0 rgba(59, 40, 204, 0.1), 0 0 1px 0 rgba(59, 40, 204, 0.05)"
+
+				},
+				{
+					"name": "Primary 300",
+					"slug": "primary-300",
+					"shadow": "0 4px 8px 0 rgba(59, 40, 204, 0.1), 0 0 1px 0 rgba(59, 40, 204, 0.05)"
+				},
+				{
+					"name": "Primary 400",
+					"slug": "primary-400",
+					"shadow": "0 8px 16px 0 rgba(59, 40, 204, 0.1), 0 0 1px 0 rgba(59, 40, 204, 0.05)"
+				},
+				{
+					"name": "Primary 500",
+					"slug": "primary-500",
+					"shadow": "0 16px 24px 0 rgba(59, 40, 204, 0.09), 0 0 1px 0 rgba(59, 40, 204, 0.05)"
+				},
+				{
+					"name": "Primary 600",
+					"slug": "primary-600",
+					"shadow": "0 24px 40px 0 rgba(59, 40, 204, 0.08), 0 0 1px 0 rgba(59, 40, 204, 0.05)"
+				}
+			]
+		},
 		"typography": {
 			"fluid": true,
 			"fontFamilies": [
