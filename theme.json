@@ -1,4 +1,6 @@
 {
+	"version": 2,
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"settings": {
 		"appearanceTools": true,
 		"spacing": {
@@ -15,9 +17,50 @@
 					"name": "System fonts"
 				},
 				{
-					"fontFamily": "Helvetica Neue, Helvetica, Arial, sans-serif",
-					"slug": "helvetica-arial",
-					"name": "Helvetica or Arial"
+					"fontFamily": "\"Inter\", sans-serif",
+					"name": "Inter",
+					"slug": "inter",
+					"fontFace": [
+						{
+							"fontFamily": "Inter",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "200 900",
+							"src": [
+								"file:./src/fonts/inter/Inter-VariableFont_slnt,wght.ttf"
+							]
+						}
+					]
+				},
+				{
+					"fontFamily": "Oxygen",
+					"slug": "oxygen",
+					"fontFace": [
+						{
+							"fontFamily": "Oxygen",
+							"fontStyle": "normal",
+							"fontWeight": "300",
+							"src": [
+								"file:./src/fonts/oxygen/Oxygen-Light.ttf"
+							]
+						},
+						{
+							"fontFamily": "Oxygen",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"src": [
+								"file:./src/fonts/oxygen/Oxygen-Regular.ttf"
+							]
+						},
+						{
+							"fontFamily": "Oxygen",
+							"fontStyle": "normal",
+							"fontWeight": "900",
+							"src": [
+								"file:./src/fonts/oxygen/Oxygen-Bold.ttf"
+							]
+						}
+					]
 				}
 			]
 		},
@@ -34,49 +77,84 @@
 			"gradients": [],
 			"palette": [
 				{
-					"color": "#425a5e",
+					"color": "#3B28CC",
 					"slug": "primary-100",
 					"name": "Primary 100"
 				},
 				{
-					"color": "#2d3d40",
-					"slug": "primary-200",
-					"name": "Primary 200"
-				},
-				{
-					"color": "#3f4040",
-					"slug": "primary-300",
-					"name": "Primary 300"
-				},
-				{
-					"color": "#fff",
+					"color": "#2667FF",
 					"slug": "secondary-100",
 					"name": "Secondary 100"
 				},
 				{
-					"color": "#e3e4eb",
-					"slug": "secondary-200",
-					"name": "Secondary 200"
-				},
-				{
-					"color": "#d3d3d3",
-					"slug": "secondary-300",
-					"name": "Secondary 300"
-				},
-				{
-					"color": "#f48d60",
+					"color": "#2595E7",
 					"slug": "tertiary-100",
 					"name": "Tertiary 100"
 				},
 				{
-					"color": "#f47c48",
-					"slug": "tertiary-200",
-					"name": "Tertiary 200"
+					"color": "#22C55E",
+					"slug": "success",
+					"name": "Success"
 				},
 				{
-					"color": "#f3713c",
-					"slug": "tertiary-300",
-					"name": "Tertiary 300"
+					"color": "#EAB308",
+					"slug": "warning",
+					"name": "Warning"
+				},
+				{
+					"color": "#EF4444",
+					"slug": "error",
+					"name": "Error"
+				},
+				{
+					"color": "#F9FAFB",
+					"slug": "grey-50",
+					"name": "Grey 50"
+				},
+				{
+					"color": "#F3F4F6",
+					"slug": "grey-100",
+					"name": "Grey 100"
+				},
+				{
+					"color": "#E5E7EB",
+					"slug": "grey-200",
+					"name": "Grey 200"
+				},
+				{
+					"color": "#D1D5DB",
+					"slug": "grey-300",
+					"name": "Grey 300"
+				},
+				{
+					"color": "#9CA3AF",
+					"slug": "grey-400",
+					"name": "Grey 400"
+				},
+				{
+					"color": "#6B7280",
+					"slug": "grey-500",
+					"name": "Grey 500"
+				},
+				{
+					"color": "#4B5563",
+					"slug": "grey-600",
+					"name": "Grey 600"
+				},
+				{
+					"color": "#374151",
+					"slug": "grey-700",
+					"name": "Grey 700"
+				},
+				{
+					"color": "#1F2937",
+					"slug": "grey-800",
+					"name": "Grey 800"
+				},
+				{
+					"color": "#111827",
+					"slug": "grey-900",
+					"name": "Grey 900"
 				}
 			]
 		},
@@ -88,14 +166,14 @@
 
 	"styles": {
 		"typography": {
-			"fontFamily": "var(--wp--preset--font-family--system-fonts)",
+			"fontFamily": "var(--wp--preset--font-family--inter)",
 			"fontSize": "var(--wp--preset--font-size--medium)"
 		},
 		"spacing": {
 			"blockGap": "var(--wp--preset--spacing--50)"
 		},
 		"color": {
-			"background": "var(--wp--preset--color--secondary-100)",
+			"background": "var(--wp--preset--color--white)",
 			"text": "var(--wp--preset--color--primary-300)"
 		},
 		"elements": {
@@ -418,7 +496,5 @@
 			"name": "no-title",
 			"title": "No Title"
 		}
-	],
-	"version": 2,
-	"$schema": "https://schemas.wp.org/trunk/theme.json"
+	]
 }
