@@ -129,6 +129,53 @@
 						}
 					]
 				}
+			],
+			"fontSizes": [
+				{
+					"fluid": {
+						"min": "0.75rem",
+						"max": "0.875rem"
+					},
+					"size": "0.875",
+					"slug": "small"
+				},
+				{
+					"fluid": {
+						"min": "0.875rem",
+						"max": "1rem"
+					},
+					"size": "1rem",
+					"slug": "normal"
+				},
+				{
+					"fluid": {
+						"min": "1rem",
+						"max": "1.125rem"
+					},
+					"size": "1.125rem",
+					"slug": "medium"
+				},
+				{
+					"fluid": {
+						"min": "1.75rem",
+						"max": "1.875rem"
+					},
+					"size": "1.75rem",
+					"slug": "large"
+				},
+				{
+					"fluid": false,
+					"size": "2.25rem",
+					"slug": "x-large"
+				},
+				{
+					"fluid": {
+						"min": "4rem",
+						"max": "10rem"
+					},
+					"size": "10rem",
+					"slug": "xx-large"
+				}
 			]
 		},
 		"color": {
@@ -365,19 +412,50 @@
 				}
 			},
 			"button": {
+				"border": {
+					"color": "currentColor",
+					"radius": "10px",
+					"style": "solid",
+					"width": "3px"
+				},
+				"color": {
+					"background": "var(--wp--preset--color--primary-500)",
+					"text": "var(--wp--preset--color--white)"
+				},
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--small)",
+					"lineHeight": "1.435"
+				},
+				"spacing": {
+					"padding": {
+						"top": "8px",
+						"right": "16px",
+						"bottom": "8px",
+						"left": "16px"
+					}
+				},
 				":hover": {
 					"color": {
-						"background": "var(--wp--preset--color--tertiary-300)"
+						"background": "var(--wp--preset--color--primary-600)"
+					},
+					"border": {
+						"color": "currentColor"
 					}
 				},
 				":focus": {
 					"color": {
-						"background": "var(--wp--preset--color--tertiary-200)"
+						"background": "var(--wp--preset--color--primary-500)"
+					},
+					"border": {
+						"color": "var(--wp--preset--color--primary-300)"
 					}
 				},
 				":active": {
 					"color": {
-						"background": "var(--wp--preset--color--tertiary-200)"
+						"background": "var(--wp--preset--color--primary-700)"
+					},
+					"border": {
+						"color": "currentColor"
 					}
 				}
 			},
