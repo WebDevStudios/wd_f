@@ -43,7 +43,7 @@
 			"fluid": true,
 			"fontFamilies": [
 				{
-					"fontFamily": "Inter",
+					"fontFamily": "Inter, sans-serif",
 					"name": "Body",
 					"slug": "body",
 					"fontFace": [
@@ -59,7 +59,7 @@
 					]
 				},
 				{
-					"fontFamily": "Oxygen",
+					"fontFamily": "Oxygen, sans-serif",
 					"name": "Headline",
 					"slug": "headline",
 					"fontFace": [
