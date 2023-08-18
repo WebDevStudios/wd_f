@@ -79,36 +79,32 @@
 			"fluid": true,
 			"fontFamilies": [
 				{
-					"fontFamily": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-					"slug": "system-fonts",
-					"name": "System fonts"
-				},
-				{
-					"fontFamily": "\"Inter\", sans-serif",
-					"name": "Inter",
-					"slug": "inter",
+					"fontFamily": "Inter",
+					"name": "Body",
+					"slug": "body",
 					"fontFace": [
 						{
 							"fontFamily": "Inter",
 							"fontStretch": "normal",
 							"fontStyle": "normal",
-							"fontWeight": "200 900",
+							"fontWeight": "300 400 700 900",
 							"src": [
-								"file:./src/fonts/inter/Inter-VariableFont_slnt,wght.ttf"
+								"file:./src/fonts/inter/Inter.var.woff2"
 							]
 						}
 					]
 				},
 				{
 					"fontFamily": "Oxygen",
-					"slug": "oxygen",
+					"name": "Headline",
+					"slug": "headline",
 					"fontFace": [
 						{
 							"fontFamily": "Oxygen",
 							"fontStyle": "normal",
 							"fontWeight": "300",
 							"src": [
-								"file:./src/fonts/oxygen/Oxygen-Light.ttf"
+								"file:./src/fonts/oxygen/oxygen-v15-latin-300.woff2"
 							]
 						},
 						{
@@ -116,7 +112,7 @@
 							"fontStyle": "normal",
 							"fontWeight": "400",
 							"src": [
-								"file:./src/fonts/oxygen/Oxygen-Regular.ttf"
+								"file:./src/fonts/oxygen/oxygen-v15-latin-regular.woff2"
 							]
 						},
 						{
@@ -124,7 +120,7 @@
 							"fontStyle": "normal",
 							"fontWeight": "900",
 							"src": [
-								"file:./src/fonts/oxygen/Oxygen-Bold.ttf"
+								"file:./src/fonts/oxygen/oxygen-v15-latin-700.woff2"
 							]
 						}
 					]
@@ -381,7 +377,7 @@
 
 	"styles": {
 		"typography": {
-			"fontFamily": "var(--wp--preset--font-family--inter)",
+			"fontFamily": "var(--wp--preset--font-family--body)",
 			"fontSize": "var(--wp--preset--font-size--medium)"
 		},
 		"spacing": {
@@ -394,16 +390,19 @@
 		"elements": {
 			"h1": {
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--huge)"
+					"fontFamily": "var(--wp--preset--font-family--headline)",
+					"fontSize": "var(--wp--preset--font-size--xx-large)"
 				}
 			},
 			"h2": {
 				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--headline)",
 					"fontSize": "var(--wp--preset--font-size--x-large)"
 				}
 			},
 			"h3": {
 				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--headline)",
 					"fontSize": "var(--wp--preset--font-size--large)"
 				}
 			},
@@ -479,7 +478,7 @@
 		"blocks": {
 			"core/post-title": {
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--huge)",
+					"fontSize": "var(--wp--preset--font-size--xx-large)",
 					"fontWeight": "bold"
 				},
 				"spacing": {
@@ -502,7 +501,7 @@
 				"elements": {
 					"h1": {
 						"typography": {
-							"fontSize": "var(--wp--preset--font-size--huge)"
+							"fontSize": "var(--wp--preset--font-size--xx-large)"
 						}
 					},
 					"h2": {
