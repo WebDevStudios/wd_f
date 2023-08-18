@@ -193,124 +193,49 @@
 			"gradients": [],
 			"palette": [
 				{
-					"color": "#EBE9FB",
-					"slug": "primary-50",
-					"name": "Primary 50"
-				},
-				{
-					"color": "#D7D3F6",
+					"color": "#425a5e",
 					"slug": "primary-100",
 					"name": "Primary 100"
 				},
 				{
-					"color": "#AEA6EE",
+					"color": "#2d3d40",
 					"slug": "primary-200",
 					"name": "Primary 200"
 				},
 				{
-					"color": "#867AE5",
+					"color": "#3f4040",
 					"slug": "primary-300",
 					"name": "Primary 300"
 				},
 				{
-					"color": "#5E4DDC",
-					"slug": "primary-400",
-					"name": "Primary 400"
-				},
-				{
-					"color": "#3B28CC",
-					"slug": "primary-500",
-					"name": "Primary 500"
-				},
-				{
-					"color": "#2F20A3",
-					"slug": "primary-600",
-					"name": "Primary 600"
-				},
-				{
-					"color": "#23187A",
-					"slug": "primary-700",
-					"name": "Primary 700"
-				},
-				{
-					"color": "#E9F0FF",
-					"slug": "secondary-50",
-					"name": "Secondary 50"
-				},
-				{
-					"color": "#D4E1FF",
+					"color": "#fff",
 					"slug": "secondary-100",
 					"name": "Secondary 100"
 				},
 				{
-					"color": "#A8C2FF",
+					"color": "#e3e4eb",
 					"slug": "secondary-200",
 					"name": "Secondary 200"
 				},
 				{
-					"color": "#7DA4FF",
+					"color": "#d3d3d3",
 					"slug": "secondary-300",
 					"name": "Secondary 300"
 				},
 				{
-					"color": "#5185FF",
-					"slug": "secondary-400",
-					"name": "Secondary 400"
-				},
-				{
-					"color": "#2667FF",
-					"slug": "secondary-500",
-					"name": "Secondary 500"
-				},
-				{
-					"color": "#0046EA",
-					"slug": "secondary-600",
-					"name": "Secondary 600"
-				},
-				{
-					"color": "#0035B0",
-					"slug": "secondary-700",
-					"name": "Secondary 700"
-				},
-				{
-					"color": "#E9F4FD",
-					"slug": "tertiary-50",
-					"name": "Tertiary 50"
-				},
-				{
-					"color": "#D3EAFA",
+					"color": "#f48d60",
 					"slug": "tertiary-100",
 					"name": "Tertiary 100"
 				},
 				{
-					"color": "#A8D5F5",
+					"color": "#f47c48",
 					"slug": "tertiary-200",
 					"name": "Tertiary 200"
 				},
 				{
-					"color": "#7CBFF1",
+					"color": "#f3713c",
 					"slug": "tertiary-300",
 					"name": "Tertiary 300"
-				},
-				{
-					"color": "#51AAEC",
-					"slug": "tertiary-400",
-					"name": "Tertiary 400"
-				},
-				{
-					"color": "#2595E7",
-					"slug": "tertiary-500",
-					"name": "Tertiary 500"
-				},
-				{
-					"color": "#1578C1",
-					"slug": "tertiary-600",
-					"name": "Tertiary 600"
-				},
-				{
-					"color": "#105A91",
-					"slug": "tertiary-700",
-					"name": "Tertiary 700"
 				},
 				{
 					"color": "#22C55E",
@@ -326,46 +251,6 @@
 					"color": "#EF4444",
 					"slug": "error",
 					"name": "Error"
-				},
-				{
-					"color": "#F9FAFB",
-					"slug": "grey-50",
-					"name": "Grey 50"
-				},
-				{
-					"color": "#F3F4F6",
-					"slug": "grey-100",
-					"name": "Grey 100"
-				},
-				{
-					"color": "#E5E7EB",
-					"slug": "grey-200",
-					"name": "Grey 200"
-				},
-				{
-					"color": "#D1D5DB",
-					"slug": "grey-300",
-					"name": "Grey 300"
-				},
-				{
-					"color": "#9CA3AF",
-					"slug": "grey-400",
-					"name": "Grey 400"
-				},
-				{
-					"color": "#6B7280",
-					"slug": "grey-500",
-					"name": "Grey 500"
-				},
-				{
-					"color": "#4B5563",
-					"slug": "grey-600",
-					"name": "Grey 600"
-				},
-				{
-					"color": "#374151",
-					"slug": "grey-700",
-					"name": "Grey 700"
 				}
 			]
 		},
@@ -385,7 +270,7 @@
 		},
 		"color": {
 			"background": "var(--wp--preset--color--white)",
-			"text": "var(--wp--preset--color--grey-600)"
+			"text": "var(--wp--preset--color--black)"
 		},
 		"elements": {
 			"h1": {
@@ -418,17 +303,16 @@
 			},
 			"button": {
 				"border": {
-					"color": "currentColor",
 					"radius": "10px",
 					"style": "solid",
-					"width": "3px"
+					"width": "0"
 				},
 				"color": {
-					"background": "var(--wp--preset--color--primary-500)",
+					"background": "var(--wp--preset--color--tertiary-300)",
 					"text": "var(--wp--preset--color--white)"
 				},
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--small)",
+					"fontSize": "var(--wp--preset--font-size--normal)",
 					"lineHeight": "1.435"
 				},
 				"spacing": {
@@ -441,36 +325,37 @@
 				},
 				":hover": {
 					"color": {
-						"background": "var(--wp--preset--color--primary-600)"
-					},
-					"border": {
-						"color": "currentColor"
+						"background": "var(--wp--preset--color--tertiary-200)"
 					}
 				},
 				":focus": {
 					"color": {
-						"background": "var(--wp--preset--color--primary-500)"
-					},
-					"border": {
-						"color": "var(--wp--preset--color--primary-300)"
+						"background": "var(--wp--preset--color--tertiary-200)"
 					}
 				},
 				":active": {
 					"color": {
-						"background": "var(--wp--preset--color--primary-700)"
-					},
-					"border": {
-						"color": "currentColor"
+						"background": "var(--wp--preset--color--tertiary-100)"
 					}
 				}
 			},
 			"link": {
 				"color": {
-					"text": "var(--wp--preset--color--tertiary-300)"
+					"text": "var(--wp--preset--color--primary-700)"
 				},
 				":active": {
 					"color": {
-						"text": { "ref": "styles.color.text" }
+						"text": "var(--wp--preset--color--primary-500)"
+					}
+				},
+				":hover": {
+					"color": {
+						"text": "var(--wp--preset--color--primary-500)"
+					}
+				},
+				":focus": {
+					"color": {
+						"text": "var(--wp--preset--color--primary-500)"
 					}
 				}
 			}
