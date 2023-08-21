@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0bd1ce4efbbb1ccc0c275969c3d66549",
+    "content-hash": "00d07fb9fe5e0c846df8871d1492ee8d",
     "packages": [
         {
             "name": "composer/installers",
@@ -251,6 +251,21 @@
                 "source": "https://github.com/erusev/parsedown-extra/tree/0.8.x"
             },
             "time": "2019-12-30T23:20:37+00:00"
+        },
+        {
+            "name": "wpengine/advanced-custom-fields-pro",
+            "version": "6.2.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://packages.wdslab.com/dist/wpengine/advanced-custom-fields-pro/wpengine-advanced-custom-fields-pro-6.2.0.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0 || ~2.0"
+            },
+            "replace": {
+                "wpackagist-plugin/advanced-custom-fields": "self.version"
+            },
+            "type": "wordpress-plugin"
         }
     ],
     "packages-dev": [

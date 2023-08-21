@@ -19,7 +19,21 @@
 		},
 		"sort-packages": true
 	},
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "https://packages.wdslab.com"
+		}
+	],
+	"extra": {
+		"installer-paths": {
+			"../../plugins/{$name}/": [
+				"type:wordpress-plugin"
+			]
+		}
+	},
 	"require": {
+		"wpengine/advanced-custom-fields-pro": "^6.0",
 		"composer/installers": "^1.5 || ^2.0.0",
 		"erusev/parsedown": "^1.7",
 		"erusev/parsedown-extra": "^0.8.1"
