@@ -95,7 +95,7 @@ Command | Action
 
 ### Building a block with wpcli
 
-In order to build a block, run the following wpcli script.
+In order to build a block, the ACF Pro plugin needs to be activated and then run the following wpcli script.
 
 Note: If you're using Local, you can open the shell from within Local to do this. `Sitename -> Open site shell`.
 
