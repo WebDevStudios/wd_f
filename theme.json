@@ -107,19 +107,22 @@
 			"text": true,
 			"duotone": [
 				{
-					"colors": ["#E94D53", "#4A5181"],
+					"colors": [
+						"#E94D53",
+						"#4A5181"
+					],
 					"slug": "pink-and-blue",
 					"name": "Pink and Blue"
 				}
 			],
 			"gradients": [
 				{
-					"gradient": "linear-gradient(180deg, rgba(74,81,129,1) 0%, rgba(233,77,83,1) 100%);",
+					"gradient": "linear-gradient(180deg, rgba(74,81,129,1) 0%, rgba(233,77,83,1) 100%)",
 					"slug": "pink-to-blue",
 					"name": "Pink to Blue"
 				},
 				{
-					"gradient": "linear-gradient(180deg, rgba(74, 81, 129, 1) 0%, rgba(29, 38, 97, 1) 100%);",
+					"gradient": "linear-gradient(180deg, rgba(74, 81, 129, 1) 0%, rgba(29, 38, 97, 1) 100%)",
 					"slug": "blue-light-to-dark",
 					"name": "Blue light to dark"
 				}
@@ -529,7 +532,6 @@
 			}
 		}
 	},
-
 	"templateParts": [
 		{
 			"name": "header",
