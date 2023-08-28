@@ -28,6 +28,7 @@ module.exports = {
 	...defaultConfig,
 	entry: {
 		index: './src/index.js',
+		editor: './src/js/editor/index.js',
 		...customBlockEntryPaths,
 	},
 	module: {

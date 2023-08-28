@@ -34,3 +34,31 @@ function scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\scripts' );
+
+/**
+ * Enqueue editor scripts.
+ *
+ * @author WebDevStudios
+ */
+function editor_scripts() {
+
+	$asset_file_path = get_template_directory() . '/build/editor.asset.php';
+
+	if ( is_readable( $asset_file_path ) ) {
+		$asset_file = include $asset_file_path;
+	} else {
+		$asset_file = [
+			'version'      => '1.0.0',
+			'dependencies' => [ 'wp-polyfill' ],
+		];
+	}
+
+	wp_enqueue_script(
+		'editor-js',
+		get_template_directory_uri() . '/build/editor.js',
+		$asset_file['dependencies'],
+		$asset_file['version'],
+	);
+
+}
+add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\editor_scripts' );
