@@ -205,41 +205,24 @@ class Blocks_Scaffold {
 	 * @author Biplav Subedi <biplav.subedi@webdevstudios.com>
 	 */
 	private function create_block_editor_assets() {
-		$asset_js  = ROOT_PATH . 'inc/wpcli/block-starter/editor.js';
-		$asset_php = ROOT_PATH . 'inc/wpcli/block-starter/editor.asset.php';
-
+		$asset_js   = ROOT_PATH . 'inc/wpcli/block-starter/edit.js';
 		$asset_scss = ROOT_PATH . 'inc/wpcli/block-starter/editor.scss';
 
 		if (
 			! $this->init_filesystem()->exists( $asset_js )
-			|| ! $this->init_filesystem()->exists( $asset_php )
 			|| ! $this->init_filesystem()->exists( $asset_scss )
 		) {
 			WP_CLI::error( 'ERROR :: Could not find editor assets.', true );
 		}
 
-		// copy editor js.
-		if ( ! $this->init_filesystem()->copy( $asset_js, ROOT_PATH . 'blocks/' . $this->name . '/editor.js' ) ) {
+		// copy edit.js.
+		if ( ! $this->init_filesystem()->copy( $asset_js, ROOT_PATH . 'blocks/' . $this->name . '/edit.js' ) ) {
 			WP_CLI::error( 'ERROR :: Could not create editor js file.', true );
-		}
-		// copy editor.asset.php.
-		if ( ! $this->init_filesystem()->copy( $asset_php, ROOT_PATH . 'blocks/' . $this->name . '/editor.asset.php' ) ) {
-			WP_CLI::error( 'ERROR :: Could not create editor asset php file.', true );
 		}
 
 		// copy styles.
-		if ( ! $this->init_filesystem()->copy( $asset_scss, ROOT_PATH . 'src/scss/blocks/custom/' . $this->name . '.editor.scss' ) ) {
+		if ( ! $this->init_filesystem()->copy( $asset_scss, ROOT_PATH . 'blocks/' . $this->name . '/editor.scss' ) ) {
 			WP_CLI::error( 'ERROR :: Could not create styles file.', true );
-		}
-
-		// add js file for build process.
-		if (
-			! $this->init_filesystem()->put_contents(
-				ROOT_PATH . 'src/js/blocks/custom/' . $this->name . '.editor.js',
-				"import '../../../scss/blocks/custom/" . $this->name . ".editor.scss';\n"
-			)
-		) {
-			WP_CLI::error( 'ERROR :: Could not create a block js style file.', true );
 		}
 	}
 
@@ -250,8 +233,8 @@ class Blocks_Scaffold {
 	 * @author Biplav Subedi <biplav.subedi@webdevstudios.com>
 	 */
 	private function create_block_assets() {
-		$asset_js  = ROOT_PATH . 'inc/wpcli/block-starter/script.js';
-		$asset_php = ROOT_PATH . 'inc/wpcli/block-starter/script.asset.php';
+		$asset_js  = ROOT_PATH . 'inc/wpcli/block-starter/index.js';
+		$asset_php = ROOT_PATH . 'inc/wpcli/block-starter/index.asset.php';
 
 		$asset_scss = ROOT_PATH . 'inc/wpcli/block-starter/style.scss';
 
@@ -264,28 +247,18 @@ class Blocks_Scaffold {
 		}
 
 		// copy editor js.
-		if ( ! $this->init_filesystem()->copy( $asset_js, ROOT_PATH . 'blocks/' . $this->name . '/script.js' ) ) {
-			WP_CLI::error( 'ERROR :: Could not create script js file.', true );
+		if ( ! $this->init_filesystem()->copy( $asset_js, ROOT_PATH . 'blocks/' . $this->name . '/index.js' ) ) {
+			WP_CLI::error( 'ERROR :: Could not create `index.js` file.', true );
 		}
 
 		// copy script.asset.php.
-		if ( ! $this->init_filesystem()->copy( $asset_php, ROOT_PATH . 'blocks/' . $this->name . '/script.asset.php' ) ) {
+		if ( ! $this->init_filesystem()->copy( $asset_php, ROOT_PATH . 'blocks/' . $this->name . '/index.asset.php' ) ) {
 			WP_CLI::error( 'ERROR :: Could not create script asset php file.', true );
 		}
 
 		// copy styles.
-		if ( ! $this->init_filesystem()->copy( $asset_scss, ROOT_PATH . 'src/scss/blocks/custom/' . $this->name . '.scss' ) ) {
+		if ( ! $this->init_filesystem()->copy( $asset_scss, ROOT_PATH . 'blocks/' . $this->name . '/style.scss' ) ) {
 			WP_CLI::error( 'ERROR :: Could not create styles file.', true );
-		}
-
-		// add js file for build process.
-		if (
-			! $this->init_filesystem()->put_contents(
-				ROOT_PATH . 'src/js/blocks/custom/' . $this->name . '.js',
-				"import '../../../scss/blocks/custom/" . $this->name . ".scss';\n"
-			)
-		) {
-			WP_CLI::error( 'ERROR :: Could not create a block js style file.', true );
 		}
 	}
 
@@ -311,10 +284,10 @@ add_action( 'cli_init', __NAMESPACE__ . '\cli_register_commands' );
  * @since  2.0.0
  */
 function wds_acf_register_blocks() {
-	$wds_acf_blocks = glob( ROOT_PATH . 'blocks/*/block.json' );
+	$wds_acf_blocks = glob( ROOT_PATH . 'build-blocks/*/block.json' );
 
 	foreach ( $wds_acf_blocks as $block ) {
-		register_block_type( $block );
+		$block = register_block_type( $block );
 	}
 }
 add_action( 'init', __NAMESPACE__ . '\wds_acf_register_blocks' );
