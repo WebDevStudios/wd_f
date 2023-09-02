@@ -215,9 +215,12 @@ class Blocks_Scaffold {
 			WP_CLI::error( 'ERROR :: Could not find editor assets.', true );
 		}
 
-		// copy edit.js.
-		if ( ! $this->init_filesystem()->copy( $asset_js, ROOT_PATH . 'blocks/' . $this->name . '/edit.js' ) ) {
-			WP_CLI::error( 'ERROR :: Could not create editor js file.', true );
+		$content = $this->init_filesystem()->get_contents( $asset_js );
+		$content = str_replace( '{{name}}', $this->name, $content );
+
+		// write edit.js.
+		if ( ! $this->init_filesystem()->put_contents( ROOT_PATH . 'blocks/' . $this->name . '/edit.js', $content ) ) {
+			WP_CLI::error( 'ERROR :: Could not create a `edit.js` file.', true );
 		}
 
 		// copy styles.
