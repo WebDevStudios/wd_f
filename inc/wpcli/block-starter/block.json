@@ -1,16 +1,16 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
-	"apiVersion": 2,
+	"apiVersion": 3,
 	"name": "wds/{{name}}",
 	"title": "{{title}}",
 	"description": "{{description}}",
-	"editorScript": "file:./editor.js",
-	"editorStyle": "file:../../build/{{name}}.editor.css",
-	"script": "file:./script.js",
-	"style": "file:../../build/{{name}}.css",
+	"script": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
 	"category": "wds-blocks-category",
 	"icon": "{{icon}}",
 	"keywords": [ "{{name}}", "{{keyword}}", "block" ],
+	"render": "file:./{{name}}.php",
 	"acf": {
 		"mode": "auto",
 		"renderTemplate": "{{name}}.php"
