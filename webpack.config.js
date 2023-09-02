@@ -6,18 +6,6 @@ const { CleanWebpackPlugin } = require( 'clean-webpack-plugin' );
 const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );
 const ESLintPlugin = require( 'eslint-webpack-plugin' );
 const StylelintPlugin = require( 'stylelint-webpack-plugin' );
-const { glob } = require( 'glob' );
-
-// See: https://stackoverflow.com/a/63604863 to convert `glob` output into an object with keys as entry names.
-const customBlockEntryPaths = glob
-	.sync( './src/js/blocks/custom/*.js', {
-		dotRelative: true,
-	} )
-	.reduce( ( acc, filePath ) => {
-		const entry = filePath.replace( /^.*[\\\/]/, '' ).replace( '.js', '' );
-		acc[ entry ] = filePath;
-		return acc;
-	}, {} );
 
 /**
  * Webpack config (Development mode)
@@ -28,7 +16,6 @@ module.exports = {
 	...defaultConfig,
 	entry: {
 		index: './src/index.js',
-		...customBlockEntryPaths,
 	},
 	module: {
 		rules: [
