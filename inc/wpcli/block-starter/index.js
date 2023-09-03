@@ -20,15 +20,26 @@ import './style.scss';
 import Edit from './edit';
 import metadata from './block.json';
 
-/**
- * Every block starts by registering a new block type definition.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
- */
-registerBlockType( metadata.name, {
-	...metadata,
+import apiFetch from '@wordpress/api-fetch';
+const plugins = await apiFetch( { path: '/wp/v2/plugins' } );
+
+const isACFProEnabled = plugins.find(
+	( plugin ) =>
+		plugin.plugin === 'advanced-custom-fields-pro/acf' &&
+		plugin.status === 'active'
+);
+
+if ( ! isACFProEnabled ) {
 	/**
-	 * @see ./edit.js
+	 * Every block starts by registering a new block type definition.
+	 *
+	 * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
 	 */
-	edit: Edit,
-} );
+	registerBlockType( metadata.name, {
+		...metadata,
+		/**
+		 * @see ./edit.js
+		 */
+		edit: Edit,
+	} );
+}
