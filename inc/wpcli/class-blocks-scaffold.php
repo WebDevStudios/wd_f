@@ -290,7 +290,16 @@ function wds_acf_register_blocks() {
 	$wds_acf_blocks = glob( ROOT_PATH . 'build-blocks/*/block.json' );
 
 	foreach ( $wds_acf_blocks as $block ) {
-		register_block_type( $block );
+		if ( class_exists( 'acf_pro' ) ) {
+			register_block_type(
+				$block,
+				[
+					'render' => null,
+				]
+			);
+		} else {
+			register_block_type( $block );
+		}
 	}
 }
 add_action( 'init', __NAMESPACE__ . '\wds_acf_register_blocks' );
