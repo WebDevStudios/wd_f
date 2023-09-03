@@ -294,7 +294,7 @@ function wds_acf_register_blocks() {
 			register_block_type(
 				$block,
 				[
-					'render' => null,
+					'render_callback' => null,
 				]
 			);
 		} else {
