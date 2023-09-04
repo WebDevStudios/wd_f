@@ -44,7 +44,7 @@
 	},
 	"devDependencies": {
 		"@evilmartians/lefthook": "^1.4.6",
-		"@wordpress/prettier-config": "^2.21.0",
+		"@wordpress/prettier-config": "^2.24.0",
 		"auto-changelog": "^2.4.0",
 		"autoprefixer": "^10.4.15",
 		"browser-sync": "^2.29.3",
