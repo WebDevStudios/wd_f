@@ -14,13 +14,13 @@ namespace WebDevStudios\wd_f;
  *
  * @return void
  */
-function wds_register_blocks() {
+function register_blocks() {
 	// Get the paths of all block configuration files.
-	$block_config_files = glob( ROOT_PATH . 'blocks/*/block.json' );
+	$block_config_files = glob( ROOT_PATH . 'blocks/*/build/block.json' );
 
 	foreach ( $block_config_files as $block_config_file ) {
 		// Register each block type using its configuration file.
 		register_block_type( $block_config_file );
 	}
 }
-add_action( 'init', __NAMESPACE__ . '\wds_register_blocks' );
+add_action( 'init', __NAMESPACE__ . '\register_blocks' );
