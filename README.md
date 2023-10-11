@@ -14,7 +14,7 @@ The WebDev FSE Starter Block Theme
 	- [Quick Start](#quick-start)
 - [Setup](#setup)
 	- [Development](#development)
-	- [Building a block with wpcli](#building-a-block-with-wpcli)
+	- [Scaffold a Block](#scaffold-a-block)
 - [Contributing and Support](#contributing-and-support)
 
 ## Introduction
@@ -93,7 +93,7 @@ Command | Action
 `npm run format` | Fix all CSS, JS, MD, and PHP formatting errors automatically
 `npm run report` | Gives detailed information on coding standards violations in PHP code
 
-### Scaffold a block
+### Scaffold a Block
 
 In order to scaffold a custom block, run the following script in the root of the theme.
 
