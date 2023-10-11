@@ -66,7 +66,7 @@
 		"build": "cross-env NODE_ENV=production wp-scripts build --config webpack.prod.js && npm run build:blocks",
 		"check-engines": "wp-scripts check-engines",
 		"check-licenses": "wp-scripts check-licenses",
-		"create-block": "cd blocks && npx @wordpress/create-block@latest --template ../inc/block-template --no-wp-scripts --namespace wds --category wds-blocks-category",
+		"create-block": "cd blocks && npx @wordpress/create-block@latest --template ../inc/block-template --no-wp-scripts",
 		"dev": "npm run watch",
 		"format": "run-p format:*",
 		"format:css": "npx prettier '**/*.scss' --write && npm run lint:css -- --fix",
