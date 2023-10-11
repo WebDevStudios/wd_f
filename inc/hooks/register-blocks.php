@@ -15,8 +15,11 @@ namespace WebDevStudios\wd_f;
  * @return void
  */
 function register_blocks() {
+	// Define the ROOT_PATH constant.
+	define( 'WDS_ROOT_PATH', get_template_directory() . '/' );
+
 	// Get the paths of all block configuration files.
-	$block_config_files = glob( ROOT_PATH . 'blocks/*/build/block.json' );
+	$block_config_files = glob( WDS_ROOT_PATH . 'blocks/*/build/block.json' );
 
 	foreach ( $block_config_files as $block_config_file ) {
 		// Register each block type using its configuration file.
