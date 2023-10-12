@@ -1,7 +1,11 @@
 {
-  "name": "wds/block-template",
+  "name": "wds-block-template",
   "version": "1.0.0",
   "description": "A template designed to be used with @wordpress/create-block for enabling custom core blocks.",
+  "author": {
+    "name": "WebDevStudios",
+    "url": "https://webdevstudios.com"
+  },
   "license": "GPL-2.0-or-later",
   "keywords": [
     "wordpress",
@@ -9,8 +13,12 @@
     "block template",
     "wds block"
   ],
-  "author": {
-    "name": "WebDevStudios",
-    "url": "https://webdevstudios.com"
+	"homepage": "https://github.com/WebDevStudios/wd_f",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WebDevStudios/wd_f"
+  },
+  "bugs": {
+    "url": "https://github.com/WebDevStudios/wd_f/issues"
   }
 }
