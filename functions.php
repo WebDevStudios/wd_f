@@ -22,7 +22,6 @@ function include_inc_files() {
 		'inc/setup/', // Theme setup.
 		'inc/shortcodes/', // Load shortcodes.
 		'inc/template-tags/', // Custom template tags for this theme.
-		'inc/wpcli/', // WPClI to create custom blocks.
 	];
 
 	foreach ( $files as $include ) {

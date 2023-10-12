@@ -14,7 +14,7 @@ The WebDev FSE Starter Block Theme
 	- [Quick Start](#quick-start)
 - [Setup](#setup)
 	- [Development](#development)
-	- [Building a block with wpcli](#building-a-block-with-wpcli)
+	- [Scaffold a Block](#scaffold-a-block)
 - [Contributing and Support](#contributing-and-support)
 
 ## Introduction
@@ -93,22 +93,18 @@ Command | Action
 `npm run format` | Fix all CSS, JS, MD, and PHP formatting errors automatically
 `npm run report` | Gives detailed information on coding standards violations in PHP code
 
-### Building a block with wpcli
+### Scaffold a Block
 
-In order to build a block, run the following wpcli script.
-
-Note: If you're using Local, you can open the shell from within Local to do this. `Sitename -> Open site shell`.
+In order to scaffold a custom block, run the following script in the root of the theme.
 
 ```bash
-wp wds create_portable_block myblock --title="This is myblock" --desc="This block is used for wds." --keyword="myblock" --icon="table-row-before" --namespace="wds"
+npm run create-block myblock
 ```
 
-This will scaffold out a block inside of the `blocks` folder in the theme. Replace `myblock` with the name of your block and update the other items `title`, `desc`, `keyword`, `icon`, `namespace` with the appropriate information.
-
-Note: If you don't see your new block available under the block listing in the editor after following the above steps, try changing the namespacing in your block's `block.json` to the following format `your-namespace/blockname` and check again.
+This will scaffold out a block inside of the `blocks` folder in the theme. Replace `myblock` with the name of your block and run `npm run build` to build the block.
 
 ## Contributing and Support
 
 Your contributions and [support tickets](https://github.com/WebDevStudios/wd_f/issues) are welcome. Please see our [contributing guidelines](https://github.com/WebDevStudios/wd_f/blob/main/CONTRIBUTING.md) before submitting a pull request.
 
-wd_f is free software, and is released under the terms of the GNU General Public License version 2 or any later version. See [LICENSE.md](https://github.com/WebDevStudios/wd_f/blob/main/LICENSE.md) for complete license.
+`wd_f` is free software, and is released under the terms of the GNU General Public License version 2 or any later version. See [LICENSE.md](https://github.com/WebDevStudios/wd_f/blob/main/LICENSE.md) for complete license.
